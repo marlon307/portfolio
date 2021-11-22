@@ -1,0 +1,69 @@
+.socials {
+  position: sticky;
+  z-index: 99998;
+  width: 2em;
+  left: 3em;
+  bottom: 12%;
+  margin-top: -136px;
+
+  li {
+    margin: 0.6em 0;
+    border-radius: 50%;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    background: #fff;
+    border: 1px solid #ADBACB;
+    border-radius: 50%;
+
+    &:hover {
+      transition: all 0.1s linear;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  svg {
+    width: 1.2em;
+    fill: #6B7688;
+    z-index: 4444;
+  }
+
+  li:nth-child(1):hover {
+    a {
+      background: #0a66c2;
+    }
+  }
+
+  li:nth-child(2):hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    a {
+      background-image: radial-gradient(circle at bottom left, #F9DC64, #FF553E, #B5008E);
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-image: radial-gradient(circle at top left, #3023AE, #3023AE1f, transparent);
+      }
+    }
+  }
+
+  li:nth-child(3):hover {
+    a {
+      background: #1d9bf0;
+    }
+  }
+}

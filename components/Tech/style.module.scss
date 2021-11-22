@@ -1,0 +1,111 @@
+.tech {
+  padding: 9em 0;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  background: #edf2f8;
+}
+
+.techskill {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.circlecard {
+  width: 4.6em;
+  height: 4.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  svg {
+    width: 52%;
+  }
+}
+
+.skep {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 6em;
+  gap: 8em;
+}
+
+.cexperience {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2.6em;
+  gap: 4em;
+  cursor: pointer;
+
+  span:nth-child(1) {
+    font-weight: 600;
+    color: #a675f7;
+    min-width: 50px;
+  }
+
+  &:hover {
+    div {
+      span:nth-child(1) {
+        color: #a675f7;
+      }
+    }
+  }
+
+  div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: -2px;
+
+    span:nth-child(1) {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: #181719;
+      margin-bottom: 0.2em;
+    }
+
+    span:nth-child(2) {
+      font-weight: 500;
+      color: #6b7668;
+    }
+
+    p {
+      width: 100%;
+      display: none;
+      z-index: 88888;
+      position: absolute;
+      content: '';
+      bottom: 4em;
+      padding: 1em;
+      background: #fff;
+      text-align: left;
+      color: #6B7688;
+      min-width: 250px;
+      border-radius: 0.8em;
+      box-shadow: 4px 5px 20px 0px #00000024;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: flex;
+        bottom: -6px;
+        width: 16px;
+        height: 16px;
+        transform: rotate(45deg);
+        background: #fff;
+      }
+    }
+  }
+
+  &:hover p {
+    display: block;
+  }
+}

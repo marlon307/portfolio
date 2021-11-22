@@ -1,0 +1,29 @@
+.credit {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  height: 70vh;
+  padding: 2em;
+  border-radius: 2em;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  article {
+    margin-top: 2em;
+
+    div {
+      margin-top: 0.8em;
+    }
+  }
+
+  a {
+    color: #4451ff;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}

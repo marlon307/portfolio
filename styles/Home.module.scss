@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: 3em;
+  }
+
+  svg {
+    width: 2em;
+    fill: #181719;
+  }
+
+  button {
+    color: #4451ff;
+    cursor: pointer;
+    background: transparent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

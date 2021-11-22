@@ -15,9 +15,10 @@ function index() {
           <a href="https://www.respponse.com/" target="_blank" rel="noreferrer">www.respponse.com</a>
           <aside>
             <p>
-              O projeto “respponse.com” vem de uma ideia em tonar o e-commerce mais
-              intuitivo e interface simples de entender, e ao mesmo tempo passando a
-              segurança para o usuário.
+              O projeto “respponse.com” vem de uma ideia em tornar o e-commerce mais
+              intuitivo com interface simples de entender, e ao mesmo tempo passando a
+              segurança para o usuário. O foco desse projeto no momento é o mercado de
+              roupas e acessórios
             </p>
             <p>Desevolvido com Next.Js, Redux, Sass e TypeScript </p>
           </aside>

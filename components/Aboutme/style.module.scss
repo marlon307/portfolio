@@ -9,15 +9,15 @@
 .about {
   margin: 3em auto;
   padding: 2.8em 4em;
-  background: #fff;
+  background: var(--color-white);
   border-radius: 1.6em;
   width: 650px;
   display: flex;
   gap: 2.6em;
   align-items: flex-start;
   justify-content: center;
-  box-shadow: inset 0px -14px 0 -10px #d8e2ee,
-    6px 6px 20px 12px #f5f5f8;
+  box-shadow: inset 0px -14px 0 -10px var(--color-background),
+    6px 6px 20px 12px var(--color-shadow);
 
   figure {
     width: 150px;
@@ -25,7 +25,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #eeeeee;
     border-radius: 50%;
     overflow: hidden;
     flex: none;
@@ -42,12 +41,13 @@
     gap: 1em;
 
     span {
-      color: #a675f7;
+      color: var(--color-blue);
+      font-weight: 500;
     }
   }
 
   p {
-    color: #181719;
+    color: var(--color-black);
     text-align: left;
     font-weight: 500;
     font-size: 1.2em;
@@ -79,9 +79,9 @@
     width: 150px;
     height: 12px;
     bottom: -48px;
-    background: #f5f5f8dc;
+    background: var(--color-shadow2);
     border-radius: 50%;
-    box-shadow: 0 0 20px 12px #f5f5f8;
+    box-shadow: 0 0 20px 12px var(--color-shadow2);
   }
 
   .cube {
@@ -106,7 +106,7 @@
     flex-direction: column;
     gap: 0.8em;
     border-radius: 1em;
-    background: #D8E2EE;
+    background: var(--color-background-w);
 
     svg {
       width: 6em;

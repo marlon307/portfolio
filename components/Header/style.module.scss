@@ -13,7 +13,7 @@
   div {
     font-size: 1.1em;
     font-weight: 900;
-    -webkit-text-stroke: 0.04em black;
+    -webkit-text-stroke: 0.04em var(--color-black);
 
     span:last-child {
       color: transparent;
@@ -24,7 +24,7 @@
     float: left;
     margin: 0 18px;
     font-size: 0.9em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   a {
@@ -32,6 +32,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    color: var(--color-black);
 
     &::before {
       content: '';
@@ -40,17 +41,17 @@
       display: none;
       width: 4px;
       height: 4px;
-      background: #a675f7;
+      background: var(--color-blue);
       border-radius: 50%;
     }
   }
 
   a:hover {
-    color: #a675f7;
+    color: var(--color-blue);
   }
 
   .active {
-    color: #a675f7;
+    color: var(--color-blue);
 
     &::before {
       display: flex;
@@ -62,13 +63,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #30368E;
+  background: var(--color-blue);
   border-radius: 50%;
   width: 2em;
   height: 2em;
   cursor: pointer;
 
   svg {
-    fill: #fff;
+    fill: var(--color-white);
   }
 }

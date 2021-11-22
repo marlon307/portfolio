@@ -15,10 +15,9 @@ function index() {
           <a href="https://www.respponse.com/" target="_blank" rel="noreferrer">www.respponse.com</a>
           <aside>
             <p>
-              O projeto “respponse.com” vem de uma ideia em tonar o e-commerce
-              mais clean e interativo, fazendo que o usuário não precise ficar
-              navegando em várias páginas até finalizar a compra. Até o momento com
-              foco está sendo o mercado de roupas e acessórios.
+              O projeto “respponse.com” vem de uma ideia em tonar o e-commerce mais
+              intuitivo e interface simples de entender, e ao mesmo tempo passando a
+              segurança para o usuário.
             </p>
             <p>Desevolvido com Next.Js, Redux, Sass e TypeScript </p>
           </aside>

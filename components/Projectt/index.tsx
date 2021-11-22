@@ -20,7 +20,7 @@ function index() {
               segurança para o usuário. O foco desse projeto no momento é o mercado de
               roupas e acessórios
             </p>
-            <p>Desevolvido com Next.Js, Redux, Sass e TypeScript </p>
+            <p>Desenvolvido com Next.Js, Redux, Sass e TypeScript </p>
           </aside>
         </div>
         <iframe

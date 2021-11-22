@@ -34,7 +34,7 @@ function index() {
             />
             <CircleCard
               color="#edf8ff"
-              title="Css"
+              title="CSS3"
               svg={ (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="96px" height="96px">
                   <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />

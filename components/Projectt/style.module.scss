@@ -11,7 +11,7 @@
   max-width: 1200px;
   width: 90%;
   padding: 1em;
-  box-shadow: 4px 5px 20px 0px #00000024;
+  box-shadow: 4px 5px 20px 0px var(--color-shadow);
   border-radius: 2em;
 
   div {
@@ -36,7 +36,7 @@
 
   a:hover {
     text-decoration: underline;
-    color: #4451ff;
+    color: var(--color-link);
   }
 
   aside {
@@ -44,9 +44,9 @@
     top: 2em;
     visibility: hidden;
     padding: 2em;
-    background: #333333f5;
+    background: var(--color-black-panel);
     border-radius: 1em;
-    color: #e2e2e2;
+    color: var(--color-text-sobpanel);
     width: 100%;
     min-height: 30vh;
     opacity: 0;

@@ -4,7 +4,6 @@
   min-height: 100vh;
   overflow: hidden;
   text-align: center;
-  background: #edf2f8;
 }
 
 .techskill {
@@ -44,14 +43,14 @@
 
   span:nth-child(1) {
     font-weight: 600;
-    color: #a675f7;
+    color: var(--color-blue);
     min-width: 50px;
   }
 
   &:hover {
     div {
       span:nth-child(1) {
-        color: #a675f7;
+        color: var(--color-blue);
       }
     }
   }
@@ -68,13 +67,13 @@
     span:nth-child(1) {
       font-size: 1.2em;
       font-weight: 800;
-      color: #181719;
+      color: var(--color-black);
       margin-bottom: 0.2em;
     }
 
     span:nth-child(2) {
       font-weight: 500;
-      color: #6b7668;
+      color: var(--color-sub-title);
     }
 
     p {
@@ -85,12 +84,12 @@
       content: '';
       bottom: 4em;
       padding: 1em;
-      background: #fff;
+      background: var(--color-white);
       text-align: left;
-      color: #6B7688;
+      color: var(--color-sub-title);
       min-width: 250px;
       border-radius: 0.8em;
-      box-shadow: 4px 5px 20px 0px #00000024;
+      box-shadow: 4px 5px 20px 0px var(--color-shadow);
 
       &:before {
         content: '';
@@ -100,7 +99,7 @@
         width: 16px;
         height: 16px;
         transform: rotate(45deg);
-        background: #fff;
+        background: var(--color-white);
       }
     }
   }

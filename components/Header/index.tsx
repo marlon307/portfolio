@@ -38,20 +38,20 @@ const Header = function Header() {
           </li>
           <li>
             <a
-              href="#about"
-              className={ cx(section === 'about' && style.active) }
-              onClick={ () => setSection('about') }
-            >
-              SOBRE
-            </a>
-          </li>
-          <li>
-            <a
               href="#skills"
               className={ cx(section === 'skills' && style.active) }
               onClick={ () => setSection('skills') }
             >
               SKILLS
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className={ cx(section === 'about' && style.active) }
+              onClick={ () => setSection('about') }
+            >
+              SOBRE
             </a>
           </li>
           <li>

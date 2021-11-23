@@ -1,8 +1,8 @@
 .background {
   position: absolute;
   z-index: -1;
-  width: 64vh;
-  height: 64vh;
+  width: min(70vw, 550px);
+  height: min(70vw, 550px);
   background: linear-gradient(300deg, var(--color-background-w) 25%, var(--color-background) 80%);
   border-radius: 50%;
 
@@ -16,21 +16,40 @@
   span:nth-child(1) {
     left: -22%;
     bottom: -38%;
-    width: 20vh;
-    height: 20vh;
+    width: min(24vw, 200px);
+    height: min(24vw, 200px);
   }
 
   span:nth-child(2) {
     left: -53%;
     bottom: 20%;
-    width: 12vh;
-    height: 12vh;
+    width: min(14vw, 120px);
+    height: min(14vw, 120px);
   }
 
   span:nth-child(3) {
     right: -26%;
     bottom: -32%;
-    width: 8vh;
-    height: 8vh;
+    width: min(10vw, 120px);
+    height: min(10vw, 120px);
+  }
+}
+
+@media (max-width: 1080px) {
+  .background {
+    span:nth-child(1) {
+      left: -4%;
+      bottom: -48%;
+    }
+
+    span:nth-child(2) {
+      left: -23%;
+      bottom: 10%;
+    }
+
+    span:nth-child(3) {
+      right: -16%;
+      bottom: -12%;
+    }
   }
 }

@@ -16,6 +16,11 @@ const Header = function Header() {
     window.addEventListener('resize', event);
   }, []);
 
+  function openMenu(event: { preventDefault: () => void; }) {
+    event.preventDefault();
+    setStateMenu(!statemenu);
+  }
+
   return (
     <header className={ style.header }>
       <div className={ style.contheader }>
@@ -29,9 +34,9 @@ const Header = function Header() {
         </div>
         { width > 725 && <Nav /> }
         <a
-          aria-hidden="true"
+          href="/"
           className={ style.menuhd }
-          onClick={ () => setStateMenu(!statemenu) }
+          onClick={ openMenu }
         >
           <div className={ style.icon }>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

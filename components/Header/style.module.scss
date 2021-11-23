@@ -60,16 +60,31 @@
 }
 
 .menuhd {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: var(--color-blue);
   border-radius: 50%;
   width: 2em;
   height: 2em;
   cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 
   svg {
     fill: var(--color-white);
+  }
+}
+
+@media (max-width: 725px) {
+  .header {
+    padding: 2em 1.8em;
+  }
+
+  .nav {
+    display: none;
   }
 }

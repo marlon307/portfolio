@@ -18,8 +18,8 @@ const Home: NextPage = function Home() {
     <>
       <main className={ styles.main }>
         <Apresentation />
-        <Aboutme />
         <Tech />
+        <Aboutme />
         <Projectt />
         <Contact />
       </main>

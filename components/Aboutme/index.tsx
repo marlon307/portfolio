@@ -6,7 +6,7 @@ import photo from '../../assets/download.jpeg';
 function index() {
   return (
     <section id="about" className={ style.aboutme }>
-      <h1>Sobre</h1>
+      <h1>SOBRE</h1>
       <About
         img={ photo }
         title="Marlon Ramos"

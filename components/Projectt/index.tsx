@@ -4,7 +4,7 @@ import style from './style.module.scss';
 function index() {
   return (
     <section id="project" className={ style.projects }>
-      <h1>Projetos</h1>
+      <h1>PROJETOS</h1>
       <div className={ style.contframe }>
         <iframe
           title="https://www.respponse.com/"

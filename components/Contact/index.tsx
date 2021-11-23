@@ -55,7 +55,7 @@ const Index = function Index() {
 
   return (
     <section id="contact" className={ style.contact } onSubmit={ sendEmail }>
-      <h1>Contato</h1>
+      <h1>CONTATO</h1>
       <div className={ style.methodcontact }>
         <span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">

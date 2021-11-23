@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from '../BackGrounds/Background';
+import Background from '../BackGrounds/Background1';
 import Card from './Card';
 import CircleCard from './CircleCard';
 import Me from './Me';

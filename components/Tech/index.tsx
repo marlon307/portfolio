@@ -6,7 +6,7 @@ import style from './style.module.scss';
 function index() {
   return (
     <section id="skills" className={ style.tech }>
-      <h1>Skills & Experiencias</h1>
+      <h1>SKILLS & EXPERIENCIAS</h1>
       <div className={ style.skep }>
         <div className={ style.skill }>
           <div className={ style.techskill }>

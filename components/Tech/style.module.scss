@@ -116,6 +116,12 @@
   }
 }
 
+@media (max-width: 700px) {
+  .tech {
+    padding: 4em 0;
+  }
+}
+
 @media (max-width: 930px) {
   .skep {
     gap: 2em;
@@ -136,5 +142,6 @@
   .cexperience {
     gap: 0;
     text-align: left;
+    margin: 0 1.4em;
   }
 }

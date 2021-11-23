@@ -31,3 +31,9 @@
     text-decoration: underline;
   }
 }
+
+@media (max-width: 700px) {
+  .projects {
+    padding: 4em 0;
+  }
+}

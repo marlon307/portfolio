@@ -8,6 +8,7 @@
 
 .mailmessage {
   margin: 4em auto;
+  padding: 0 2em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,5 +138,23 @@
 
   span:last-child {
     color: var(--color-err);
+  }
+}
+
+@media (max-width: 600px) {
+  .methodcontact {
+    margin: 3em 0;
+  }
+
+  .mailmessage {
+    margin-top: 0;
+  }
+
+  .primaryline {
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
   }
 }

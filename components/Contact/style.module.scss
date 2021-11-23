@@ -7,7 +7,7 @@
 }
 
 .mailmessage {
-  margin: 4em auto;
+  margin: 8em auto;
   padding: 0 2em;
   display: flex;
   align-items: center;
@@ -58,30 +58,6 @@
   p {
     margin-top: 1em;
     color: var(--color-err);
-  }
-}
-
-.methodcontact {
-  max-width: 700px;
-  margin: 4em auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  span {
-    padding: 1.4em 2em 1.4em 1em;
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-    background: var(--color-wpbg);
-
-    svg {
-      width: 4em;
-      height: 2em;
-      fill: var(--color-wp);
-    }
   }
 }
 

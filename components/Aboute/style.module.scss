@@ -4,7 +4,7 @@
   h1 {
     color: var(--color-main-title);
     width: 180px;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
   }
 
   p {
@@ -21,7 +21,7 @@
       width: 52px;
       height: 3px;
       margin-top: 9px;
-      background: var(--color-text);
+      background: var(--color-main-title);
       display: block;
     }
   }
@@ -40,6 +40,11 @@
 
 .line {
   margin-bottom: 2em;
+
+  h2 {
+    color: var(--color-main-title);
+    margin-bottom: 1em;
+  }
 }
 
 .lineskill {
@@ -52,5 +57,67 @@
   svg {
     width: 3em;
     height: 3em;
+  }
+}
+
+.esxp {
+  padding-right: 1em;
+
+  .cont {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+    gap: 1em;
+  }
+
+  .pl {
+    color: var(--color-main-title);
+    font-weight: 500;
+    width: 2.4em;
+  }
+
+  .sl {
+    h3 {
+      color: var(--color-main-title);
+      margin-bottom: 8px;
+    }
+
+    span {
+      color: var(--color-text);
+    }
+  }
+}
+
+.block:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    margin: 0 auto 3em;
+  }
+}
+
+.esxp {
+  height: 30vh;
+  overflow: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+  .content {
+    flex-direction: column;
+  }
+
+  .block:nth-child(2) {
+    picture {
+      width: 72vw;
+    }
   }
 }

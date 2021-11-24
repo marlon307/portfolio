@@ -5,23 +5,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 
 .scene {
   position: relative;
   width: 100%;
-  height: 80vh;
-  margin: 6em auto 2em;
-  perspective: 1000px;
-  overflow: hidden;
+  height: 85vh;
+  margin: 4em auto 2em;
+  perspective: 86em;
 }
 
 .carousel {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateZ(-100vw);
+  transform: translateZ(-115vw);
   transform-style: preserve-3d;
   transition: transform 1s;
   margin: 0 auto;
@@ -32,48 +32,48 @@
 
 .panel {
   position: absolute;
-  width: 90%;
+  width: 80%;
   height: 100%;
   line-height: 116px;
   font-size: 80px;
   font-weight: bold;
   color: white;
   text-align: center;
-  background: #333333c2;
+  background: #333333e1;
 }
 
 .panel:nth-child(1) {
-  transform: rotateY(0deg) translateZ(100vw);
+  transform: rotateY(0deg) translateZ(114vw);
 }
 
 .panel:nth-child(2) {
-  transform: rotateY(40deg) translateZ(100vw);
+  transform: rotateY(40deg) translateZ(114vw);
 }
 
 .panel:nth-child(3) {
-  transform: rotateY(80deg) translateZ(100vw);
+  transform: rotateY(80deg) translateZ(114vw);
 }
 
 .panel:nth-child(4) {
-  transform: rotateY(120deg) translateZ(100vw);
+  transform: rotateY(120deg) translateZ(114vw);
 }
 
 .panel:nth-child(5) {
-  transform: rotateY(160deg) translateZ(100vw);
+  transform: rotateY(160deg) translateZ(114vw);
 }
 
 .panel:nth-child(6) {
-  transform: rotateY(200deg) translateZ(100vw);
+  transform: rotateY(200deg) translateZ(114vw);
 }
 
 .panel:nth-child(7) {
-  transform: rotateY(240deg) translateZ(100vw);
+  transform: rotateY(240deg) translateZ(114vw);
 }
 
 .panel:nth-child(8) {
-  transform: rotateY(280deg) translateZ(100vw);
+  transform: rotateY(280deg) translateZ(114vw);
 }
 
 .panel:nth-child(9) {
-  transform: rotateY(320deg) translateZ(100vw);
+  transform: rotateY(320deg) translateZ(114vw);
 }

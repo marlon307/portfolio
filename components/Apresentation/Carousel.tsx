@@ -18,7 +18,7 @@ const Carousel = function Carousel() {
     <>
       <section id="home" className={ style.content }>
         <div className={ style.scene }>
-          <div className={ style.carousel } style={ { transform: `translateZ(-100vw) rotateY(${position}deg)` } }>
+          <div className={ style.carousel } style={ { transform: `translateZ(-116vw) rotateY(${position}deg)` } }>
             <div className={ style.panel }>1</div>
             <div className={ style.panel }>2</div>
             <div className={ style.panel }>3</div>

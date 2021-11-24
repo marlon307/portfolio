@@ -1,6 +1,4 @@
 .aboute {
-  width: 50%;
-  height: 100%;
   padding: 4em;
 
   h1 {
@@ -14,5 +12,16 @@
     max-width: 500px;
     color: #fff;
     font-size: 1.4em;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8em;
+
+  svg {
+    width: 26em;
   }
 }

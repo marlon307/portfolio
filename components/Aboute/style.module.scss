@@ -98,7 +98,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 72vw;
     height: 350px;
     margin: 0 auto 3em;
   }
@@ -114,5 +113,11 @@
 
   .content {
     flex-direction: column;
+  }
+
+  .block:nth-child(2) {
+    picture {
+      width: 72vw;
+    }
   }
 }

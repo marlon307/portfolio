@@ -47,7 +47,7 @@
 
 .main {
   min-height: 100vh;
-  background: #1c1a1a;
+  background: var(--color-background);
   display: flex;
   align-items: center;
   justify-content: center;

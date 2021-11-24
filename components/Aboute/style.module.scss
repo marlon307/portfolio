@@ -4,14 +4,26 @@
   h1 {
     color: var(--color-main-title);
     width: 180px;
-    border-bottom: 2px solid var(--color-main-title);
     margin-bottom: 1em;
   }
 
   p {
     max-width: 500px;
-    color: #fff;
+    color: var(--color-text);
     font-size: 1.4em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 18px;
+
+    &::before {
+      content: "";
+      width: 52px;
+      height: 3px;
+      margin-top: 9px;
+      background: var(--color-text);
+      display: block;
+    }
   }
 }
 

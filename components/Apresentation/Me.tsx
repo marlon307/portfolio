@@ -4,11 +4,13 @@ import style from './style.module.scss';
 const Me = function Me() {
   return (
     <div className={ style.me }>
-      <span>&#x1F44B;&#x1F3FB;</span>
+      <p>&#x1F44B;&#x1F3FB;</p>
       <div>
-        <span>Oi, eu sou</span>
+        <span>Ola, sou o </span>
         <span>Marlon</span>
+        <span>!</span>
       </div>
+      <p>Desenvolvedor Full-Stack</p>
     </div>
   );
 };

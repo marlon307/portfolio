@@ -7,14 +7,14 @@ import Apresentation from '../components/Apresentation/Apresentation';
 import Aboute from '../components/Aboute/Aboute';
 
 const Home: NextPage = function Home() {
-  const [pagestate, setPagestate] = useState(0);
+  const [pagestate, setPagestate] = useState(100);
 
   return (
     <>
       <main className={ style.main }>
         <Carousel position={ -pagestate }>
-          <Apresentation />
           <Aboute />
+          <Apresentation />
         </Carousel>
       </main>
       <footer className={ style.footer }>
@@ -23,9 +23,9 @@ const Home: NextPage = function Home() {
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(100) }
+                onClick={ () => setPagestate(0) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 100,
+                  [style.active]: pagestate === 0,
                 }) }
               >
                 Sobre
@@ -34,20 +34,20 @@ const Home: NextPage = function Home() {
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(200) }
+                onClick={ () => setPagestate(100) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 200,
+                  [style.active]: pagestate === 100,
                 }) }
               >
-                Skills
+                Home
               </a>
             </li>
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(300) }
+                onClick={ () => setPagestate(200) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 300,
+                  [style.active]: pagestate === 200,
                 }) }
               >
                 Projetos

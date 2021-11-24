@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import style from './style.module.scss';
 
 const Header = function Header() {
@@ -7,7 +8,9 @@ const Header = function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">MARLON</a>
+            <Link href="/">
+              <a>MARLON</a>
+            </Link>
           </li>
           <li>Menu</li>
         </ul>

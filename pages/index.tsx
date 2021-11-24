@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import cx from 'classnames';
-import style from '../styles/Home.module.scss';
+import style from '../styles/global.module.scss';
+import Carousel from '../components/Carousel/Carousel';
 import Apresentation from '../components/Apresentation/Apresentation';
+import Aboute from '../components/Aboute/Aboute';
 
 const Home: NextPage = function Home() {
-  const [pagestate, setPagestate] = useState(1);
+  const [pagestate, setPagestate] = useState(0);
 
   return (
     <>
       <main className={ style.main }>
-        <Apresentation />
+        <Carousel position={ -pagestate }>
+          <Apresentation />
+          <Aboute />
+        </Carousel>
       </main>
       <footer className={ style.footer }>
         <nav>
@@ -18,9 +23,9 @@ const Home: NextPage = function Home() {
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(1) }
+                onClick={ () => setPagestate(100) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 1,
+                  [style.active]: pagestate === 100,
                 }) }
               >
                 Sobre
@@ -29,9 +34,9 @@ const Home: NextPage = function Home() {
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(2) }
+                onClick={ () => setPagestate(200) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 2,
+                  [style.active]: pagestate === 200,
                 }) }
               >
                 Skills
@@ -40,9 +45,9 @@ const Home: NextPage = function Home() {
             <li>
               <a
                 href="#"
-                onClick={ () => setPagestate(3) }
+                onClick={ () => setPagestate(300) }
                 className={ cx(style.section, {
-                  [style.active]: pagestate === 3,
+                  [style.active]: pagestate === 300,
                 }) }
               >
                 Projetos

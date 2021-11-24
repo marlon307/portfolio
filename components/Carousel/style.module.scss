@@ -1,0 +1,22 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.controller {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  transition: all 0.8s;
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}

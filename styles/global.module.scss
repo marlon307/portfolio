@@ -43,3 +43,13 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+
+.main {
+  min-height: 100vh;
+  background: #1c1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}

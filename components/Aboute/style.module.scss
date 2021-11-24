@@ -98,9 +98,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 420px;
+    width: 72vw;
     height: 350px;
-    margin-bottom: 3em;
+    margin: 0 auto 3em;
   }
 }
 
@@ -108,4 +108,11 @@
   height: 30vh;
   overflow: auto;
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+
+  .content {
+    flex-direction: column;
+  }
 }

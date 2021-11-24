@@ -1,12 +1,5 @@
-.apresentation {
-  min-height: 100vh;
-  background: #1c1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .me {
+  position: relative;
   padding: 1em;
   font-size: 4em;
   font-weight: 700;
@@ -19,5 +12,15 @@
   p:nth-child(3) {
     font-weight: 300;
     font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &::before {
+      content: '';
+      width: 22px;
+      height: 6px;
+      background: #fff;
+    }
   }
 }

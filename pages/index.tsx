@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import cx from 'classnames';
 import Aboutme from '../components/Aboutme';
-import Apresentation from '../components/Apresentation';
+import Carousel from '../components/Apresentation/Carousel';
 import Credit from '../components/Credit/credit';
 import Contact from '../components/Contact';
 import Projectt from '../components/Projectt';
@@ -17,7 +17,7 @@ const Home: NextPage = function Home() {
   return (
     <>
       <main className={ styles.main }>
-        <Apresentation />
+        <Carousel />
         <Tech />
         <Aboutme />
         <Projectt />

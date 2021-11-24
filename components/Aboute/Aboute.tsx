@@ -1,5 +1,6 @@
 import React from 'react';
 import Dev from '../Svg/Dev';
+import Exp from './Exp';
 import style from './style.module.scss';
 
 const Aboute = function Aboute() {
@@ -7,14 +8,14 @@ const Aboute = function Aboute() {
     <section className={ style.aboute }>
       <h1>SOBRE</h1>
       <div className={ style.content }>
-        <div>
+        <div className={ style.block }>
           <div className={ style.line }>
             <p>
               Fazer o que gosto, porque dessa maneira a vida flui bem melhor!
             </p>
           </div>
           <div className={ style.line }>
-            <h1>SKILLS</h1>
+            <h2>SKILLS</h2>
             <div className={ style.lineskill }>
               <span title="HTML">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
@@ -107,8 +108,14 @@ const Aboute = function Aboute() {
             </div>
           </div>
         </div>
-        <div>
-          <Dev />
+        <div className={ style.block }>
+          <div className={ style.esxp }>
+            <Exp year={ 2021 } office="Desenvolvefor Web Full-Stack" institution="Trybe" />
+            <Exp year={ 2020 } office="Web design" institution="Origamid" />
+          </div>
+          <picture>
+            <Dev />
+          </picture>
         </div>
       </div>
     </section>

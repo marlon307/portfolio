@@ -1,165 +1,114 @@
-.home {
+.content {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
-  flex: 1;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: var(--color-background);
-}
-
-.me {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3em;
-  gap: 0.4em;
-  padding: 0.6em 0.8em;
-  border-radius: 0.6em;
-  background: var(--color-white);
-  transform: translate3d(-80%, -118%, 0);
-  box-shadow: inset 0px -14px 0 -10px var(--color-background-w),
-    4px 5px 20px 0px var(--color-shadow);
-
-  div {
-    display: flex;
-    flex-direction: column;
-
-    span:nth-child(1) {
-      font-size: 0.32em;
-      color: var(--color-sub-title);
-    }
-
-    span:nth-child(2) {
-      font-size: 0.8em;
-      font-weight: 600;
-      color: var(--color-black);
-    }
-  }
 }
 
-.card {
-  padding: 1em;
-  background: var(--color-white);
-  border-radius: 0.6em;
-  color: var(--color-black);
-  transform: translate3d(-214%, -12%, 0);
+
+.scene {
+  margin: 40px 0;
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  margin: 40px auto;
+  perspective: 1000px;
 }
 
-.circlecard {
+.carousel {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  color: var(--color-black);
-  text-align: center;
-  font-weight: 600;
+  transform: translateZ(-90vw);
+  transform-style: preserve-3d;
+  transition: transform 1s;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  figure {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-white);
-    border-radius: 50%;
-    margin-bottom: 0.4em;
-  }
+  justify-content: center;
 }
 
-.c1 {
-  transform: translate3d(314%, -199%, 0);
-
-  figure {
-    width: 6em;
-    height: 6em;
-  }
-
-  svg {
-    width: 4em;
-  }
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  line-height: 116px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
 }
 
-.c2 {
-  transform: translate3d(313%, -64%, 0);
-
-  figure {
-    width: 9em;
-    height: 9em;
-    background: var(--color-blue);
-
-    svg {
-      width: 6em;
-    }
-  }
+.panel:nth-child(9n+1) {
+  background: hsla(0, 100%, 50%, 0.8);
 }
 
-.c3 {
-  transform: translate3d(585%, 56%, 0);
-
-  figure {
-    width: 4em;
-    height: 4em;
-  }
-
-  svg {
-    width: 2.4em;
-  }
+.panel:nth-child(9n+2) {
+  background: hsla(40, 100%, 50%, 0.8);
 }
 
-@media (max-width: 500px) {
-  .me {
-    font-size: 2em;
-    transform: translate3d(5%, -180%, 0);
-  }
+.panel:nth-child(9n+3) {
+  background: hsla(80, 100%, 50%, 0.8);
+}
 
-  .card {
-    transform: translate3d(-80%, -80%, 0);
-    font-size: 0.8em;
-  }
+.panel:nth-child(9n+4) {
+  background: hsla(120, 100%, 50%, 0.8);
+}
 
-  .circlecard {
-    font-size: 0.8em;
-  }
+.panel:nth-child(9n+5) {
+  background: hsla(160, 100%, 50%, 0.8);
+}
 
-  .c1 {
-    transform: translate3d(290%, -280%, 0);
+.panel:nth-child(9n+6) {
+  background: hsla(200, 100%, 50%, 0.8);
+}
 
-    figure {
-      width: 4em;
-      height: 4em;
-    }
+.panel:nth-child(9n+7) {
+  background: hsla(240, 100%, 50%, 0.8);
+}
 
-    svg {
-      width: 2.4em;
-    }
-  }
+.panel:nth-child(9n+8) {
+  background: hsla(280, 100%, 50%, 0.8);
+}
 
-  .c2 {
-    transform: translate3d(110%, -100%, 0);
+.panel:nth-child(9n+0) {
+  background: hsla(320, 100%, 50%, 0.8);
+}
 
-    figure {
-      width: 6em;
-      height: 6em;
+.panel:nth-child(1) {
+  transform: rotateY(0deg) translateZ(90vw);
+}
 
-      svg {
-        width: 4em;
-      }
-    }
-  }
+.panel:nth-child(2) {
+  transform: rotateY(40deg) translateZ(90vw);
+}
 
-  .c3 {
-    transform: translate3d(500%, 56%, 0);
+.panel:nth-child(3) {
+  transform: rotateY(80deg) translateZ(90vw);
+}
 
-    figure {
-      width: 2.4em;
-      height: 2.4em;
-    }
+.panel:nth-child(4) {
+  transform: rotateY(120deg) translateZ(90vw);
+}
 
-    svg {
-      width: 1.4em;
-    }
-  }
+.panel:nth-child(5) {
+  transform: rotateY(160deg) translateZ(90vw);
+}
+
+.panel:nth-child(6) {
+  transform: rotateY(200deg) translateZ(90vw);
+}
+
+.panel:nth-child(7) {
+  transform: rotateY(240deg) translateZ(90vw);
+}
+
+.panel:nth-child(8) {
+  transform: rotateY(280deg) translateZ(90vw);
+}
+
+.panel:nth-child(9) {
+  transform: rotateY(320deg) translateZ(90vw);
 }

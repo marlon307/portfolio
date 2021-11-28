@@ -6,6 +6,7 @@ const Apresentation = function Apresentation() {
   return (
     <section className={ style.apresentation }>
       <Me />
+      <h2>Site em manutenção &#x1F6A7;</h2>
     </section>
   );
 };

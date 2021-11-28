@@ -11,7 +11,9 @@ const Aboute = function Aboute() {
         <div className={ style.block }>
           <div className={ style.line }>
             <p>
-              Fazer o que gosto, porque dessa maneira a vida flui bem melhor!
+              Fluir em desafios e relações construtivas, seja trabalho ou apenas conhecer
+              pessoas, aceitar diferenças, descobrir e evoluir os pontos e ideias em comum.
+              Contudo, aprender sobre mim, sobre o mundo e interagir com ele.
             </p>
           </div>
           <div className={ style.line }>

@@ -126,4 +126,11 @@
   .block {
     width: 100%;
   }
+
+  .block:nth-child(2) {
+
+    picture {
+      width: 100%;
+    }
+  }
 }

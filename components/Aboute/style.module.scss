@@ -1,5 +1,7 @@
 .aboute {
   padding: 4em;
+  height: 100%;
+  overflow: auto;
 
   h1 {
     color: var(--color-main-title);
@@ -34,7 +36,8 @@
   gap: 8em;
 
   svg {
-    width: 26em;
+    width: 350px;
+    height: 350px;
   }
 }
 
@@ -98,6 +101,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 350px;
     height: 350px;
     margin: 0 auto 3em;
   }
@@ -110,14 +114,16 @@
 }
 
 @media (max-width: 500px) {
+  .aboute {
+    padding: 2em;
+  }
 
   .content {
     flex-direction: column;
+    gap: 4em;
   }
 
-  .block:nth-child(2) {
-    picture {
-      width: 72vw;
-    }
+  .block {
+    width: 100%;
   }
 }

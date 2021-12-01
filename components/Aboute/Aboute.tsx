@@ -112,7 +112,7 @@ const Aboute = function Aboute() {
         </div>
         <div className={ style.block }>
           <div className={ style.esxp }>
-            <Exp year={ 2021 } office="Desenvolvefor Web Full-Stack" institution="Trybe" />
+            <Exp year={ 2021 } office="Desenvolvedor Web Full-Stack" institution="Trybe" />
             <Exp year={ 2020 } office="Web design" institution="Origamid" />
           </div>
           <picture>

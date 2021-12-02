@@ -25,7 +25,7 @@
 
 .section {
   position: relative;
-  color: var(--color-main-title);
+  color: var(--color-mn-footer);
   font-weight: 500;
   padding: 1em 0;
   display: flex;
@@ -35,16 +35,15 @@
   &::before {
     content: '';
     position: absolute;
-    border-radius: 50%;
-    top: 0;
-    width: 12px;
-    height: 12px;
+    border-radius: 2px;
+    top: 7px;
+    width: 16px;
+    height: 4px;
     visibility: none;
-    background: var(--color-main-title);
+    background: var(--color-mn-footer);
     transform: scale3d(0, 0, 0);
     transition: transform 0.3s;
   }
-
 }
 
 .active {

@@ -3,15 +3,23 @@
   border-bottom: 0;
   padding: 2em 0;
   margin-top: -5.4em;
-  justify-content: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  background: var(--color-background);
+
+  nav {
+    backdrop-filter: saturate(100%) blur(5px);
+    border-radius: 12px;
+  }
 
   li {
     float: left;
-    margin: 0 2em;
+    margin: 0 1.4em;
+  }
+
+  a {
+    padding: 1em 0.6em;
   }
 }
 

@@ -9,10 +9,9 @@ const Header = function Header() {
         <ul>
           <li>
             <Link href="/">
-              <a>MARLON</a>
+              <a>{ '</>' }</a>
             </Link>
           </li>
-          <li>Menu</li>
         </ul>
       </nav>
     </header>

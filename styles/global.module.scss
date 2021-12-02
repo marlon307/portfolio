@@ -3,21 +3,29 @@
   border-bottom: 0;
   padding: 2em 0;
   margin-top: -5.4em;
-  justify-content: center;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  background: var(--color-background);
+
+  nav {
+    backdrop-filter: saturate(100%) blur(5px);
+    border-radius: 12px;
+  }
 
   li {
     float: left;
-    margin: 0 2em;
+    margin: 0 1.4em;
+  }
+
+  a {
+    padding: 1em 0.6em;
   }
 }
 
 .section {
   position: relative;
-  color: var(--color-main-title);
+  color: var(--color-mn-footer);
   font-weight: 500;
   padding: 1em 0;
   display: flex;
@@ -27,16 +35,15 @@
   &::before {
     content: '';
     position: absolute;
-    border-radius: 50%;
-    top: 0;
-    width: 12px;
-    height: 12px;
+    border-radius: 2px;
+    top: 7px;
+    width: 16px;
+    height: 4px;
     visibility: none;
-    background: var(--color-main-title);
+    background: var(--color-mn-footer);
     transform: scale3d(0, 0, 0);
     transition: transform 0.3s;
   }
-
 }
 
 .active {

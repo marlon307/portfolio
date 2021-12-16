@@ -17,6 +17,11 @@ const Exp = function Exp({ year, office, institution }: TExpProps) {
         <h3>{ office }</h3>
         <span>{ institution }</span>
       </div>
+      <div className={ style.info }>
+        <aside>
+          sadssssssssssssss
+        </aside>
+      </div>
     </div>
   );
 };

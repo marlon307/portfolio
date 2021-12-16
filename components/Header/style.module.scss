@@ -1,11 +1,13 @@
 .header {
   z-index: 999999;
   width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
   position: fixed;
   padding: 1em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   left: 50%;
   transform: translate3d(-50%, 0, 10px);
 
@@ -14,13 +16,6 @@
     margin: 0 18px;
     font-size: 0.84em;
     font-weight: 400;
-  }
-
-  a {
-    color: var(--color-main-title);
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 8px;
   }
 }
 

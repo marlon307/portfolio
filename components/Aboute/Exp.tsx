@@ -5,9 +5,12 @@ export type TExpProps = {
   year?: number;
   office: string;
   institution: string;
+  info: string | React.ReactElement;
 }
 
-const Exp = function Exp({ year, office, institution }: TExpProps) {
+const Exp = function Exp({
+  year, office, institution, info,
+}: TExpProps) {
   return (
     <div className={ style.cont }>
       <div className={ style.pl }>
@@ -17,11 +20,9 @@ const Exp = function Exp({ year, office, institution }: TExpProps) {
         <h3>{ office }</h3>
         <span>{ institution }</span>
       </div>
-      <div className={ style.info }>
-        <aside>
-          sadssssssssssssss
-        </aside>
-      </div>
+      <span className={ style.info }>
+        { info }
+      </span>
     </div>
   );
 };

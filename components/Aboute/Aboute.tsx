@@ -112,10 +112,44 @@ const Aboute = function Aboute() {
         </div>
         <div className={ style.block }>
           <div className={ style.esxp }>
-            <Exp year={ 2021 } office="Dev. Web Full-Stack" institution="Trybe" />
-            <Exp year={ 2021 } office="Aux. Logistica" institution="SerraPark Log" />
-            <Exp year={ 2020 } office="Web design" institution="Origamid" />
-            <Exp year={ 2017 } office="Aux. Administrativo" institution="Polvilho & Trigo Souza Batista LTDA" />
+            <Exp
+              year={ 2021 }
+              office="Dev. Web Full-Stack"
+              institution="Trybe"
+              info="• São mais de 1500 horas de formação que aborda fundamentos de desenvolvimento web, desenvolvimento, Front-end, Back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais."
+            />
+            <Exp
+              year={ 2021 }
+              office="Aux. Logistica"
+              institution="SerraPark Log"
+              info={ (
+                <>
+                  <p>2019 - 2021.</p>
+                  <p>• Organizar e supervisionar o estoque de mercadorias.</p>
+                  <p>• Monitorar a entrada e a saída de itens.</p>
+                </>
+              ) }
+            />
+            <Exp
+              year={ 2020 }
+              office="Web design"
+              institution="Origamid"
+              info="• Origamid - Cursos de Web Design, Tipografia, JavaScript, SASS, HTML5, CSS3, UX Design, UI Design, React."
+            />
+            <Exp
+              year={ 2017 }
+              office="Aux. Administrativo"
+              institution="Polvilho & Trigo Souza Batista LTDA"
+              info={ (
+                <>
+                  <p>2015 - 2017.</p>
+                  <p>• Organização de documentos.</p>
+                  <p>• Produção de planilhas e relatórios.</p>
+                  <p>• Atendimento ao cliente.</p>
+                  <p>• Gestão logística e de estoque</p>
+                </>
+              ) }
+            />
           </div>
           <picture>
             <Dev />

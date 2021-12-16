@@ -5,6 +5,7 @@ import style from '../styles/global.module.scss';
 import Carousel from '../components/Carousel/Carousel';
 import Apresentation from '../components/Apresentation/Apresentation';
 import Aboute from '../components/Aboute/Aboute';
+import Project from '../components/PProject/Project';
 
 const Home: NextPage = function Home() {
   const [pagestate, setPagestate] = useState(100);
@@ -15,6 +16,7 @@ const Home: NextPage = function Home() {
         <Carousel position={ -pagestate }>
           <Aboute />
           <Apresentation />
+          <Project />
         </Carousel>
       </main>
       <footer className={ style.footer }>

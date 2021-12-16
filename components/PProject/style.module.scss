@@ -21,7 +21,8 @@
   justify-content: center;
   flex-direction: column;
   overflow: auto;
-  border: 1px solid #333;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
   padding: 3em 0;
   height: 100%;
 }

@@ -7,8 +7,8 @@ const Project = function Project() {
     <section className={ style.projects }>
       <h1>Projetos.</h1>
       <div className={ style.mural }>
-        <Card />
-        <Card />
+        <Card number="1" name="Projeto Respponse" />
+        <Card number="2" name="HowlingDawn" />
       </div>
     </section>
   );

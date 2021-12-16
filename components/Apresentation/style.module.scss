@@ -9,6 +9,10 @@
     color: var(--color-main-title);
   }
 
+  p:nth-child(1) {
+    font-weight: 400;
+  }
+
   p:nth-child(3) {
     font-weight: 300;
     font-size: 0.5em;

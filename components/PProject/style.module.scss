@@ -4,14 +4,34 @@
   justify-content: space-between;
   width: 100%;
   height: 100vh;
-  max-width: 1700px;
+  max-width: 1400px;
   padding: 0 4em;
+}
+
+.titlesection {
+  width: 250px;
+  margin-top: 22vh;
 
   h1 {
     font-family: 'Rubik';
     color: #fff;
     font-weight: 800;
-    padding-top: 22vh;
+    margin-bottom: 16px;
+  }
+
+  span {
+    color: #fff;
+    display: flex;
+    gap: 1em;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 3px;
+      margin-top: 9px;
+      background: var(--color-main-title);
+      display: block;
+    }
   }
 }
 
@@ -58,6 +78,18 @@
     align-items: flex-end;
     justify-content: space-between;
   }
+
+  picture {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: scale-down;
+  }
 }
 
 .cardproject:nth-child(2n) {
@@ -70,5 +102,61 @@
 .cardproject:nth-child(2n+1) {
   div:nth-child(2n+1) {
     border-left: 1px solid #333;
+  }
+}
+
+@media (max-width: 980px) {
+  .projects {
+    padding: 2em;
+  }
+
+  .titlesection {
+    margin-top: 4em;
+
+    h1 {
+      font-size: 3em;
+    }
+  }
+
+  .mural {
+    width: 60%;
+  }
+
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    padding: 2em;
+    flex-direction: column;
+  }
+
+  .titlesection {
+    margin-top: 3em;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  .mural {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 200px;
+    }
   }
 }

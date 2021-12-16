@@ -1,12 +1,14 @@
 import React from 'react';
+import Image from 'next/image';
 import style from './style.module.scss';
 
 type CardProps = {
   number: number | string;
   name: string;
+  url: string;
 }
 
-const Card = function Card({ number, name }: CardProps) {
+const Card = function Card({ number, name, url }: CardProps) {
   return (
     <div className={ style.cardproject }>
       <div>
@@ -14,7 +16,14 @@ const Card = function Card({ number, name }: CardProps) {
         <h2>{ number }</h2>
       </div>
       <div>
-        sdsd
+        <picture>
+          <Image
+            quality={ 100 }
+            src={ url }
+            layout="responsive"
+            objectFit="scale-down"
+          />
+        </picture>
       </div>
     </div>
   );

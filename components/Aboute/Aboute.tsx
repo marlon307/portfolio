@@ -6,7 +6,7 @@ import style from './style.module.scss';
 const Aboute = function Aboute() {
   return (
     <section className={ style.aboute }>
-      <h1>SOBRE</h1>
+      <h1>Sobre</h1>
       <div className={ style.content }>
         <div className={ style.block }>
           <div className={ style.line }>

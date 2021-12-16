@@ -4,6 +4,7 @@
   overflow: auto;
 
   h1 {
+    font-family: "Rubik";
     color: var(--color-main-title);
     width: 180px;
     margin-bottom: 0.8em;
@@ -16,11 +17,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 18px;
+    gap: 12px;
 
     &::before {
       content: "";
-      width: 52px;
+      width: 88px;
       height: 3px;
       margin-top: 9px;
       background: var(--color-main-title);
@@ -155,6 +156,15 @@
 .cont:hover .info {
   visibility: visible;
   opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .aboute {
+    h1 {
+      padding-top: 1em;
+      font-size: 2em;
+    }
+  }
 }
 
 @media (max-width: 500px) {

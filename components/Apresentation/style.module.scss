@@ -5,6 +5,10 @@
   font-weight: 700;
   color: #fff;
 
+  span {
+    font-family: var(--font-family-title-section);
+  }
+
   span:nth-child(2) {
     color: var(--color-main-title);
   }

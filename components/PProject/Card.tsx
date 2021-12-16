@@ -10,7 +10,7 @@ type CardProps = {
 
 const Card = function Card({ number, name, url }: CardProps) {
   return (
-    <div className={ style.cardproject }>
+    <a href="http://" target="_blank" rel="noopener noreferrer" className={ style.cardproject }>
       <div>
         <p>{ name }</p>
         <h2>{ number }</h2>
@@ -25,7 +25,7 @@ const Card = function Card({ number, name, url }: CardProps) {
           />
         </picture>
       </div>
-    </div>
+    </a>
   );
 };
 

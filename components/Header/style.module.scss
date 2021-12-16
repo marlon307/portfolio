@@ -5,11 +5,20 @@
   margin: 0 auto;
   position: fixed;
   padding: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   left: 50%;
   transform: translate3d(-50%, 0, 10px);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul:nth-child(1) {
+    svg {
+      width: 22px;
+    }
+  }
 
   li {
     float: left;
@@ -78,7 +87,7 @@
 
 @media (max-width: 725px) {
   .header {
-    padding: 1em;
+    padding: 1em 0;
   }
 
   .nav {

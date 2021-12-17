@@ -40,12 +40,13 @@ const Header = function Header() {
         <div className={ style.menu }>
           <a
             href="#"
-            className={ cx(style.icomn, {
-              [style.active]: menuStatus,
-            }) }
             onClick={ handleClickMenu }
           >
-            { ' ' }
+            <span
+              className={ cx(style.icomn, {
+                [style.active]: menuStatus,
+              }) }
+            />
           </a>
           <div className={ cx(style.dropmn, {
             [style.active]: menuStatus,

@@ -35,16 +35,28 @@
 
   a {
     z-index: 4444;
+    cursor: pointer;
+  }
+
+  a:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2em;
+    height: 1.2em;
   }
 }
 
 .icomn {
-  position: relative;
+  position: absolute;
+  display: block;
   width: 24px;
   height: 3px;
   border-radius: 12px;
   background: var(--color-main-title);
-  transition: transform 0.3s linear;
+  margin-bottom: 0.46em;
+  transition: all 0.2s linear;
 
   &::before {
     content: '';
@@ -55,12 +67,13 @@
     right: 0;
     background: var(--color-main-title);
     border-radius: 12px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
   }
 }
 
 .icomn.active {
   transform: rotateZ(45deg);
+  margin-bottom: 0;
 
   &::before {
     content: '';
@@ -86,7 +99,7 @@
   transition: 0.2s;
 
   ul {
-    margin-top: 6em;
+    margin-top: 8em;
     margin-left: 3em;
     display: flex;
     flex-direction: column;

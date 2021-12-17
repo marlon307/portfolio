@@ -1,11 +1,19 @@
 import React from 'react';
+import cx from 'classnames';
 import style from './style.module.scss';
 
-const Modal = function Modal() {
+type ModalProps = {
+  active: boolean;
+}
+
+const Modal = function Modal({ active }: ModalProps) {
   return (
-    <div className={ style.modal }>
-      sdsd
-    </div>
+    <div
+      id="modal"
+      className={ cx(style.modal, {
+        [style.active]: active,
+      }) }
+    />
   );
 };
 

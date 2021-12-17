@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import style from './style.module.scss';
+import { ContentModal } from '../Modal';
 
 const Header = function Header() {
   const [menuStatus, setMenuStatus] = useState(false);
@@ -69,6 +70,9 @@ const Header = function Header() {
           </div>
         </div>
       </nav>
+      <ContentModal>
+        tesdfs
+      </ContentModal>
     </header>
   );
 };

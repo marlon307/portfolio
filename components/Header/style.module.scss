@@ -14,12 +14,6 @@
     justify-content: space-between;
   }
 
-  ul:nth-child(1) {
-    svg {
-      width: 22px;
-    }
-  }
-
   li {
     float: left;
     margin: 0 18px;
@@ -28,94 +22,62 @@
   }
 }
 
-.contheader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1324px;
-  margin: 0 auto;
-}
-
-.menuhd {
+.menu {
   position: relative;
-  background: var(--color-blue);
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  z-index: 98;
+  padding-right: 1.4em;
 
   svg {
-    fill: var(--color-white);
+    width: 22px;
+  }
+
+  a {
+    z-index: 4444;
   }
 }
 
-.back {
-  position: absolute;
-  width: 26em;
-  height: 26em;
-  clip-path: circle(0% at 50% 50%);
-  background: var(--color-blue);
-  transition: clip-path 0.6s ease-in-out;
-  border-radius: 50%;
-}
-
-.activemn.back {
-  clip-path: circle(100% at 50% 50%);
-}
-
 .dropmn {
+  position: absolute;
+  width: 22em;
+  height: 22em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 50%;
+  clip-path: circle(0);
+  background: #333333;
   visibility: hidden;
   pointer-events: none;
+  overflow: hidden;
+  transition: 0.2s;
+
+  ul {
+    margin-top: 6em;
+    margin-left: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  li {
+    color: var(--color-main-title);
+    font-size: 1em;
+    padding: 0.4em;
+    margin: 0.4em;
+  }
 }
 
-.activemn.dropmn {
+.dropmn.active {
   visibility: visible;
   pointer-events: all;
+  clip-path: circle(50%);
 }
 
 @media (max-width: 725px) {
   .header {
     padding: 1em 0;
-  }
-
-  .nav {
-    position: absolute;
-    top: 2em;
-    right: -0.44em;
-
-    li {
-      float: none;
-      font-size: 0.8em;
-      margin-top: 1em;
-    }
-
-    a {
-      justify-content: right;
-
-      &::before {
-        top: -0.6em;
-        background: var(--color-white);
-      }
-
-      &:hover {
-        color: var(--color-white);
-      }
-    }
-
-    .active {
-      color: var(--color-white);
-    }
   }
 }

@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 1.4em;
 
   svg {
     width: 22px;
@@ -45,9 +46,12 @@
   align-items: center;
   justify-content: flex-start;
   border-radius: 50%;
-  clip-path: circle(50%);
-  background: rgba(219, 48, 48, 0.781);
+  clip-path: circle(0);
+  background: #333333;
+  visibility: hidden;
+  pointer-events: none;
   overflow: hidden;
+  transition: 0.2s;
 
   ul {
     margin-top: 6em;
@@ -64,6 +68,12 @@
     padding: 0.4em;
     margin: 0.4em;
   }
+}
+
+.dropmn.active {
+  visibility: visible;
+  pointer-events: all;
+  clip-path: circle(50%);
 }
 
 @media (max-width: 725px) {

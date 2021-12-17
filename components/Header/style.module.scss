@@ -38,6 +38,38 @@
   }
 }
 
+.icomn {
+  position: relative;
+  width: 24px;
+  height: 3px;
+  border-radius: 12px;
+  background: var(--color-main-title);
+  transition: transform 0.3s linear;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    top: 8px;
+    right: 0;
+    background: var(--color-main-title);
+    border-radius: 12px;
+    transition: all 0.3s linear;
+  }
+}
+
+.icomn.active {
+  transform: rotateZ(45deg);
+
+  &::before {
+    content: '';
+    top: 0;
+    width: 24px;
+    transform: rotateZ(-90deg);
+  }
+}
+
 .dropmn {
   position: absolute;
   width: 22em;

@@ -1,0 +1,9 @@
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 99999;
+  background: #444444bb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

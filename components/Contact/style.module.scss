@@ -57,7 +57,6 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1em;
-  overflow: hidden;
   border-radius: 0.6em;
 
   label {
@@ -75,12 +74,23 @@
     padding: 0 1em;
     background: transparent;
     color: var(--color-main-title);
+    border-radius: 0.6em;
+  }
+
+  input::placeholder {
+    color: transparent;
+  }
+
+  input:not(:placeholder-shown)~.placeholder,
+  input:focus~.placeholder {
+    transform: translateY(-2.6em);
   }
 }
 
 .placeholder {
   position: absolute;
   left: 0.8em;
+  transition: transform 0.2s ease-in-out;
 
   span {
     color: var(--color-main-title);

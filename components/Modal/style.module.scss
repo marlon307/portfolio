@@ -1,0 +1,18 @@
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 99999;
+  background: #444444bb;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.active {
+  position: absolute;
+  display: flex;
+  visibility: visible;
+  pointer-events: all;
+}

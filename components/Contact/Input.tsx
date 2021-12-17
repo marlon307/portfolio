@@ -16,7 +16,7 @@ const Input = function Input({
   function isRquired() {
     if (required) {
       return (
-        <div>
+        <div className={ style.placeholder }>
           <span>{ id }</span>
           { ' ' }
           <span>*</span>

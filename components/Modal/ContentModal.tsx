@@ -30,9 +30,14 @@ const ContentModal = function ContentModal({ children, active, functionTogle }: 
   return (
     getModal
       ? ReactDOM.createPortal(
-        <div className={ style.content } ref={ modalRef }>
-          { active && children }
-        </div>,
+        active && (
+          <div
+            className={ style.content }
+            ref={ modalRef }
+          >
+            { children }
+          </div>
+        ),
         getModal,
       )
       : null

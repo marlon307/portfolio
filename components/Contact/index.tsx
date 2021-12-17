@@ -76,6 +76,7 @@ const Index = function Index() {
           />
         </div>
         <textarea
+          className={ style.textarea }
           name="message"
           id="message"
           placeholder="Deixe aqui sua menssagem. *"
@@ -86,15 +87,17 @@ const Index = function Index() {
           onChange={ onChangeInputs }
           required
         />
-        { sucess === 0 && <button type="submit" value="Send">ENVIAR MENSAGEM</button> }
-        { sucess === 1 && <span>Mensagem enviada com sucesso!</span> }
-        { sucess === 2
-          && (
-            <>
-              <p>Erro ao tentar enviar mensagem. Tente novamente mais tarde! ; ).</p>
-              <button type="submit" value="Send">ENVIAR MENSAGEM</button>
-            </>
-          ) }
+        <div className={ style.button }>
+          { sucess === 0 && <button type="submit" value="Send">ENVIAR MENSAGEM</button> }
+          { sucess === 1 && <span>Mensagem enviada com sucesso!</span> }
+          { sucess === 2
+            && (
+              <>
+                <p>Erro ao tentar enviar mensagem. Tente novamente mais tarde! ; ).</p>
+                <button type="submit" value="Send">ENVIAR MENSAGEM</button>
+              </>
+            ) }
+        </div>
       </form>
     </section>
   );

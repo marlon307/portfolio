@@ -67,6 +67,11 @@
     font-size: 1em;
     padding: 0.4em;
     margin: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    font-weight: 500;
   }
 }
 

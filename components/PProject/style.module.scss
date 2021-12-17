@@ -9,20 +9,21 @@
 }
 
 .titlesection {
-  width: 250px;
+  width: 300px;
   margin-top: 22vh;
 
   h1 {
     font-family: var(--font-family-title-section);
-    color: #fff;
+    color: var(--color-main-title);
     font-weight: 800;
     margin-bottom: 16px;
   }
 
   span {
-    color: #fff;
+    color: var(--color-text);
     display: flex;
     gap: 1em;
+    font-size: 1.4em;
 
     &::before {
       content: "";
@@ -54,7 +55,7 @@
   width: 600px;
 
   :is(p, h2) {
-    color: #fff;
+    color: var(--color-main-title);
     font-weight: 700;
   }
 
@@ -63,7 +64,7 @@
     font-weight: 500;
     font-size: 3em;
     line-height: 1;
-    color: rgb(194, 194, 194);
+    color: var(--color-text);
   }
 
   div:first-child {
@@ -95,13 +96,13 @@
 .cardproject:nth-child(2n) {
   div:nth-child(2n) {
     order: 2;
-    border-left: 1px solid #333;
+    border-left: 1px solid var(--color-border);
   }
 }
 
 .cardproject:nth-child(2n+1) {
   div:nth-child(2n+1) {
-    border-left: 1px solid #333;
+    border-left: 1px solid var(--color-border);
   }
 }
 

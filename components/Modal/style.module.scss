@@ -18,3 +18,9 @@
   visibility: visible;
   pointer-events: all;
 }
+
+.content {
+  position: relative;
+  z-index: 999999;
+  overflow: hidden;
+}

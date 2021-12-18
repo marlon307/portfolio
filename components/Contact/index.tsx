@@ -40,17 +40,21 @@ const Index = function Index() {
     const template = process.env.TEMPLATE_ID!;
     const integration = process.env.USER_ID!;
 
-    emailjs.sendForm(service, template, form.current, integration)
-      .then(() => {
-        setFormInfo({
-          user_name: '',
-          user_email: '',
-          message: '',
+    try {
+      emailjs.sendForm(service, template, form.current, integration)
+        .then(() => {
+          setFormInfo({
+            user_name: '',
+            user_email: '',
+            message: '',
+          });
+          setSucess(1);
+        }, () => {
+          setSucess(2);
         });
-        setSucess(1);
-      }, () => {
-        setSucess(2);
-      });
+    } catch (err) {
+      setSucess(2);
+    }
   };
 
   return (
@@ -93,7 +97,7 @@ const Index = function Index() {
           { sucess === 2
             && (
               <>
-                <p>Erro ao tentar enviar mensagem. Tente novamente mais tarde! ; ).</p>
+                <p>Erro ao tentar enviar mensagem. Tente novamente mais tarde!</p>
                 <button type="submit" value="Send">ENVIAR MENSAGEM</button>
               </>
             ) }

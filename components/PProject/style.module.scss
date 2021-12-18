@@ -39,7 +39,7 @@
 .mural {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
   border-left: 1px solid var(--color-border);

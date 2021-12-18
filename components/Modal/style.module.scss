@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 99999;
   background: #444444bb;
@@ -13,7 +13,7 @@
 }
 
 .active {
-  position: absolute;
+  position: fixed;
   display: flex;
   visibility: visible;
   pointer-events: all;

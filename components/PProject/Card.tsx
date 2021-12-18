@@ -5,7 +5,7 @@ import style from './style.module.scss';
 type CardProps = {
   number: number | string;
   name: string;
-  url: string;
+  url: any;
 }
 
 const Card = function Card({ number, name, url }: CardProps) {

@@ -12,8 +12,18 @@ const Project = function Project() {
         <span>Projetos próprios e quais eu já participei.</span>
       </div>
       <div className={ style.mural }>
-        <Card url={ pitcRespponse } number="1" name="Respponse" />
-        <Card url={ teste } number="2" name="HowlingDawn" />
+        <Card
+          link="https://github.com/marlon307/project-respponse"
+          url={ pitcRespponse }
+          number="1"
+          name="Respponse"
+        />
+        <Card
+          link="https://github.com/marlon307/"
+          url={ teste }
+          number="2"
+          name="HowlingDawn"
+        />
       </div>
     </section>
   );

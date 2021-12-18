@@ -55,7 +55,7 @@ const Index = function Index() {
 
   return (
     <section id="contact" className={ style.contact } onSubmit={ sendEmail }>
-      <h1>CONTATO</h1>
+      <h1>Contato</h1>
       <form ref={ form } className={ style.mailmessage }>
         <div className={ style.primaryline }>
           <Input

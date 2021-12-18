@@ -5,12 +5,15 @@ import style from './style.module.scss';
 type CardProps = {
   number: number | string;
   name: string;
-  url: string;
+  url: any;
+  link: string;
 }
 
-const Card = function Card({ number, name, url }: CardProps) {
+const Card = function Card({
+  number, name, url, link,
+}: CardProps) {
   return (
-    <a href="http://" target="_blank" rel="noopener noreferrer" className={ style.cardproject }>
+    <a href={ link } target="_blank" rel="noopener noreferrer" className={ style.cardproject }>
       <div>
         <p>{ name }</p>
         <h2>{ number }</h2>
@@ -21,7 +24,7 @@ const Card = function Card({ number, name, url }: CardProps) {
             quality={ 100 }
             src={ url }
             layout="responsive"
-            objectFit="scale-down"
+            objectFit="cover"
           />
         </picture>
       </div>

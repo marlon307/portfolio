@@ -35,11 +35,6 @@
   align-items: flex-start;
   justify-content: center;
   gap: 8em;
-
-  svg {
-    width: 350px;
-    height: 350px;
-  }
 }
 
 .line {
@@ -95,21 +90,6 @@
     span {
       color: var(--color-text);
     }
-  }
-}
-
-.block:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    height: 350px;
-    margin: 0 auto 3em;
   }
 }
 
@@ -192,13 +172,6 @@
 
   .block {
     width: 100%;
-  }
-
-  .block:nth-child(2) {
-
-    picture {
-      width: 100%;
-    }
   }
 
   .esxp {

@@ -23,6 +23,8 @@ const Card = function Card({
           <Image
             quality={ 100 }
             src={ url }
+            width={ 300 }
+            height={ 240 }
             layout="responsive"
             objectFit="cover"
           />

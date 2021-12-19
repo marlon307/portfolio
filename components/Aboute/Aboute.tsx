@@ -1,5 +1,4 @@
 import React from 'react';
-import Dev from '../Svg/Dev';
 import Exp from './Exp';
 import style from './style.module.scss';
 
@@ -151,9 +150,6 @@ const Aboute = function Aboute() {
               ) }
             />
           </div>
-          <picture>
-            <Dev />
-          </picture>
         </div>
       </div>
     </section>

@@ -97,6 +97,7 @@
   pointer-events: none;
   overflow: hidden;
   transition: 0.2s;
+  z-index: -5;
 
   ul {
     margin-top: 8em;

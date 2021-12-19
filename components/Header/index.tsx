@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import cx from 'classnames';
 import style from './style.module.scss';
 import { ContentModal } from '../Modal';
 import Contact from '../Contact';
+import useOutSideClick from '../../Hooks/useOutSideClick';
 
 const Header = function Header() {
   const [menuStatus, setMenuStatus] = useState(false);
   const [modaStatus, setModalStatus] = useState(false);
+  const ref = useRef(null);
+
+  useOutSideClick(ref, () => {
+    setMenuStatus(false);
+  });
 
   function handleClickMenu(event: { preventDefault: () => void; }) {
     event.preventDefault();
@@ -49,6 +55,7 @@ const Header = function Header() {
           <a
             href="#"
             onClick={ handleClickMenu }
+            ref={ ref }
           >
             <span
               className={ cx(style.icomn, {

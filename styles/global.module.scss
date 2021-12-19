@@ -40,7 +40,7 @@
     top: 7px;
     width: 16px;
     height: 4px;
-    visibility: none;
+    visibility: hidden;
     background: var(--color-mn-footer);
     transform: scale3d(0, 0, 0);
     transition: transform 0.3s;
@@ -49,6 +49,7 @@
 
 .active {
   &::before {
+    visibility: visible;
     transform: scale3d(1, 1, 1);
   }
 }

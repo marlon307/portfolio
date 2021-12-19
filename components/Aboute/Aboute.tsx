@@ -130,7 +130,7 @@ const Aboute = function Aboute() {
               ) }
             />
             <Exp
-              year={ 2020 }
+              year={ 2021 }
               office="Web design"
               institution="Origamid"
               info="• Origamid - Cursos de Web Design, Tipografia, JavaScript, SASS, HTML5, CSS3, UX Design, UI Design, React."

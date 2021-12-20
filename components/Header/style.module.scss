@@ -23,6 +23,7 @@
 
   svg {
     fill: var(--color-main-title);
+    transition: 0.2s linear;
   }
 
   li:nth-child(1):hover {

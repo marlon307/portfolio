@@ -61,10 +61,8 @@
 
 .esxp {
   width: 100%;
-  // height: 30vh;
   cursor: pointer;
   padding-right: 1em;
-  // overflow: auto;
 
   .cont {
     position: relative;
@@ -95,7 +93,7 @@
 
 .info {
   width: 100%;
-  background: var(--color-border);
+  background: var(--color-background2);
   position: absolute;
   top: 4em;
   color: var(--color-main-title);
@@ -128,7 +126,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #333;
+    background: var(--color-background2);
     transform: rotate(46deg) translateY(-50%);
   }
 }

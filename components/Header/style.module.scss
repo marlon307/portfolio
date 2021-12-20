@@ -96,7 +96,8 @@
   visibility: hidden;
   pointer-events: none;
   overflow: hidden;
-  transition: 0.2s;
+  will-change: auto;
+  transition: all 0.2s linear;
   z-index: -5;
 
   ul {

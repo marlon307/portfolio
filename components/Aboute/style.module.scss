@@ -74,9 +74,12 @@
       display: block;
       top: -50px;
       left: 50%;
+      will-change: transform, opacity;
       transform: translateX(-50%) rotateZ(45deg);
       visibility: hidden;
       pointer-events: none;
+      transition: transform, opacity 0.2s ease-in-out;
+      opacity: 0;
     }
 
     &::after {
@@ -87,9 +90,12 @@
       border-radius: 8px;
       top: -66px;
       left: 50%;
+      will-change: transform, opacity;
       transform: translateX(-50%);
       visibility: hidden;
       pointer-events: none;
+      transition: transform, opacity 0.2s ease-in-out;
+      opacity: 0;
     }
 
     &:hover {
@@ -98,6 +104,7 @@
       &::after {
         visibility: visible;
         pointer-events: all;
+        opacity: 1;
       }
     }
   }
@@ -153,7 +160,7 @@
   visibility: hidden;
   pointer-events: none;
   opacity: 0;
-  transition: 0.2s;
+  transition: opacity 0.2s ease-in-out;
 
   p {
     font-size: 1em;
@@ -175,6 +182,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease-in-out;
     background: var(--color-background2);
     transform: rotate(46deg) translateY(-50%);
   }

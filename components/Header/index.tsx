@@ -10,9 +10,7 @@ const Header = function Header() {
   const [modaStatus, setModalStatus] = useState(false);
   const ref = useRef(null);
 
-  useOutSideClick(ref, () => {
-    setMenuStatus(false);
-  });
+  useOutSideClick(ref, () => setMenuStatus(false));
 
   function handleClickMenu(event: { preventDefault: () => void; }) {
     event.preventDefault();

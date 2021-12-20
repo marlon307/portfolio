@@ -20,6 +20,28 @@
     font-size: 0.84em;
     font-weight: 400;
   }
+
+  svg {
+    fill: var(--color-main-title);
+  }
+
+  li:nth-child(1):hover {
+    svg {
+      fill: var(--color-github);
+    }
+  }
+
+  li:nth-child(2):hover {
+    svg {
+      fill: var(--color-linkedin);
+    }
+  }
+
+  li:nth-child(3):hover {
+    svg {
+      fill: var(--color-twitter);
+    }
+  }
 }
 
 .menu {

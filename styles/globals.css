@@ -9,6 +9,9 @@
   --font-family-title-section: 'Rubik';
   --color-border: #333;
   --color-error: #b62424;
+  --color-github: #7E57C2;
+  --color-linkedin: #0E66C2;
+  --color-twitter: #1D9bF0;
 }
 
 html,
@@ -62,4 +65,8 @@ h2 {
 ::-webkit-scrollbar-track {
   background-color: transparent;
   border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -59,7 +59,7 @@
     position: absolute;
     top: 0.6em;
     color: var(--color-main-title);
-    padding: 0.6em;
+    padding-right: 0.6em;
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s linear;
@@ -198,7 +198,6 @@
   .cardproject {
     p {
       top: 0.2em;
-      padding: 0.1em;
       font-size: 0.84em;
     }
   }
@@ -237,7 +236,7 @@
     }
 
     p {
-      padding: 0.2em;
+      padding: 0;
       font-size: 0.55em;
     }
   }

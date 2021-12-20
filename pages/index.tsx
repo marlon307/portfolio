@@ -43,7 +43,7 @@ const Home: NextPage = function Home() {
                   [style.active]: pagestate === 100,
                 }) }
               >
-                Home
+                Início
               </a>
             </li>
             <li>

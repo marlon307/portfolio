@@ -57,7 +57,7 @@
 
   p {
     position: absolute;
-    top: 0;
+    top: 0.6em;
     color: var(--color-main-title);
     padding: 0.6em;
     visibility: hidden;
@@ -197,6 +197,7 @@
 @media (max-width: 415px) {
   .cardproject {
     p {
+      top: 0.2em;
       padding: 0.1em;
       font-size: 0.84em;
     }

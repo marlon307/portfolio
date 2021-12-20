@@ -49,12 +49,30 @@
 }
 
 .cardproject {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 600px;
 
-  :is(p, h2) {
+  p {
+    position: absolute;
+    top: 0;
+    color: var(--color-main-title);
+    padding: 0.6em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  &:hover {
+    p {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  :is(span, h2) {
     color: var(--color-main-title);
     font-weight: 700;
   }
@@ -78,7 +96,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    border-radius: 8px;
     overflow: hidden;
   }
 
@@ -87,6 +104,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border-radius: 8px;
   }
 
   img {
@@ -176,13 +194,11 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 415px) {
   .cardproject {
-    width: 100%;
-
-    div {
-      width: 50%;
-      height: 150px;
+    p {
+      padding: 0.1em;
+      font-size: 0.84em;
     }
   }
 }
@@ -195,6 +211,18 @@
       width: 50%;
       height: 120px;
     }
+
+    p {
+      font-size: 0.788em;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .cardproject {
+    p {
+      font-size: 0.7em;
+    }
   }
 }
 
@@ -205,6 +233,11 @@
     div {
       width: 50%;
       height: 100px;
+    }
+
+    p {
+      padding: 0.2em;
+      font-size: 0.55em;
     }
   }
 }

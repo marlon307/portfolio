@@ -17,12 +17,15 @@ const Project = function Project() {
           url={ pitcRespponse }
           number="1"
           name="Respponse"
+          desc="E-commerce desenvolvido com Next.Js e TypeScript. Com foco em venda de roupas e
+          acessórios."
         />
         <Card
           link="https://github.com/marlon307/"
           url={ pictureGitHub }
           number="2"
           name="GitHub"
+          desc="Meu gitHub ; )"
         />
       </div>
     </section>

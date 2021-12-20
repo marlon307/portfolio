@@ -7,15 +7,17 @@ type CardProps = {
   name: string;
   url: any;
   link: string;
+  desc: string;
 }
 
 const Card = function Card({
-  number, name, url, link,
+  number, name, url, link, desc,
 }: CardProps) {
   return (
     <a href={ link } target="_blank" rel="noopener noreferrer" className={ style.cardproject }>
       <div>
-        <p>{ name }</p>
+        <p>{ desc }</p>
+        <span>{ name }</span>
         <h2>{ number }</h2>
       </div>
       <div>

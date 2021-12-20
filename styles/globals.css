@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;800&display=swap');
 
 :root {
-  --color-background: #0E0E0E;
-  --color-background2: #2d2d2efa;
-  --color-main-title: #F7FDF8;
+  --color-background: #171717;
+  --color-background2: #444444;
+  --color-main-title: #EDEDED;
   --color-text: #B9B9B9;
-  --color-mn-footer: #18cd21;
+  --color-mn-footer: #00C749;
   --font-family-title-section: 'Rubik';
   --color-border: #333;
   --color-error: #b62424;

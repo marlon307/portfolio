@@ -16,7 +16,7 @@ const Aboute = function Aboute() {
             </p>
           </div>
           <div className={ style.line }>
-            <h2>SKILLS</h2>
+            <h2>Skills</h2>
             <div className={ style.lineskill }>
               <span title="HTML">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
@@ -110,6 +110,7 @@ const Aboute = function Aboute() {
           </div>
         </div>
         <div className={ style.block }>
+          <h2>Experiências</h2>
           <div className={ style.esxp }>
             <Exp
               year={ 2021 }

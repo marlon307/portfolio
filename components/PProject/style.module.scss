@@ -194,13 +194,11 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 415px) {
   .cardproject {
-    width: 100%;
-
-    div {
-      width: 50%;
-      height: 150px;
+    p {
+      padding: 0.1em;
+      font-size: 0.84em;
     }
   }
 }
@@ -213,6 +211,18 @@
       width: 50%;
       height: 120px;
     }
+
+    p {
+      font-size: 0.788em;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .cardproject {
+    p {
+      font-size: 0.7em;
+    }
   }
 }
 
@@ -223,6 +233,11 @@
     div {
       width: 50%;
       height: 100px;
+    }
+
+    p {
+      padding: 0.2em;
+      font-size: 0.55em;
     }
   }
 }

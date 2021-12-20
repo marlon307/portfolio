@@ -18,7 +18,7 @@ const Project = function Project() {
           number="1"
           name="Respponse"
           desc="E-commerce desenvolvido com Next.Js e TypeScript. Com foco em venda de roupas e
-          acessórios"
+          acessórios."
         />
         <Card
           link="https://github.com/marlon307/"

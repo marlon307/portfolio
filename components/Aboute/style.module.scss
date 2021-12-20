@@ -8,6 +8,7 @@
     color: var(--color-main-title);
     width: 180px;
     margin-bottom: 0.8em;
+    text-align: left;
   }
 
   p {
@@ -37,10 +38,20 @@
   gap: 8em;
 }
 
+.block {
+  h2 {
+    text-align: left;
+    margin-bottom: 1em;
+    font-family: var(--font-family-title-section);
+  }
+}
+
 .line {
   margin-bottom: 2em;
 
   h2 {
+    font-family: var(--font-family-title-section);
+    text-align: left;
     color: var(--color-main-title);
     margin-bottom: 1em;
   }
@@ -50,7 +61,45 @@
   margin-bottom: 12px;
 
   span {
+    position: relative;
     margin: 0 12px;
+    cursor: pointer;
+    color: var(--color-main-title);
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: var(--color-background2);
+      padding: 6px;
+      display: block;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%) rotateZ(45deg);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      background: var(--color-background2);
+      padding: 2px 8px;
+      border-radius: 8px;
+      top: -66px;
+      left: 50%;
+      transform: translateX(-50%);
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
   }
 
   svg {

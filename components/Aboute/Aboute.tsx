@@ -10,10 +10,9 @@ const Aboute = function Aboute() {
         <div className={ style.block }>
           <div className={ style.line }>
             <p>
-              {/* Desenvolver um futuro para todos atraves */ }
-              Fluir em desafios e relações construtivas, seja trabalho ou apenas conhecer
-              pessoas, aceitar diferenças, descobrir e evoluir os pontos e ideias em comum.
-              Contudo, aprender sobre mim, sobre o mundo e interagir com ele.
+              Gosto da tecnologia pelo fato de qualquer ideia pode virar realidade basta acreditar
+              e ter foco. Meu objetivo como um desenvolvedor é participar desses momentos e tornar
+              o futuro um lugar mais humanizado.
             </p>
           </div>
           <div className={ style.line }>

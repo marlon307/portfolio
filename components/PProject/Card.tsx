@@ -29,6 +29,7 @@ const Card = function Card({
             height={ 240 }
             layout="responsive"
             objectFit="cover"
+            alt={ name }
           />
         </picture>
       </div>

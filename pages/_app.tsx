@@ -9,8 +9,8 @@ const MyApp = function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Marlon</title>
-        <meta name="description" content="Portfólio Marlon" />
-        <meta property="og:title" content="Marlon" />
+        <meta name="description" content="Portfólio marlon307" />
+        <meta property="og:title" content="marlon307" />
         <meta property="og:description" content="Portfólio Marlon307" />
         <meta property="og:url" content="https://marlon307.dev/" />
         <meta property="og:type" content="website" />
@@ -18,8 +18,8 @@ const MyApp = function MyApp({ Component, pageProps }: AppProps) {
         <meta name="twitter:url" content="https://twitter.com/_marlon307" />
         <meta name="linkedin:url" content="https://www.linkedin.com/in/marlon307/" />
         <meta name="github:url" content="https://github.com/marlon307/" />
-        <meta name="author" content="Marlon" />
-        <meta name="title" content="Marlon" />
+        <meta name="author" content="marlon307" />
+        <meta name="title" content="marlon307" />
         <meta name="keywords" content="Marlon, marlon, Marlon307, marlon307, _marlon307" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

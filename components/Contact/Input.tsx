@@ -44,4 +44,8 @@ const Input = function Input({
   );
 };
 
+Input.defaultProps = {
+  required: false,
+};
+
 export default Input;

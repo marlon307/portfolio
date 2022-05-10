@@ -27,4 +27,8 @@ const Exp = function Exp({
   );
 };
 
+Exp.defaultProps = {
+  year: undefined,
+};
+
 export default Exp;

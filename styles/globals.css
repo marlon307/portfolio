@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;800&display=swap');
-
 :root {
   --color-background: #171717;
   --color-background2: #444444;
   --color-main-title: #EDEDED;
   --color-text: #B9B9B9;
   --color-mn-footer: #00C749;
-  --font-family-title-section: 'Rubik';
   --color-border: #333;
   --color-error: #b62424;
   --color-github: #7E57C2;
@@ -18,7 +15,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Arial', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
 }

@@ -4,11 +4,11 @@
   overflow: auto;
 
   h1 {
-    font-family: var(--font-family-title-section);
     color: var(--color-main-title);
     width: 180px;
     margin-bottom: 0.8em;
     text-align: left;
+    font-weight: 900;
   }
 
   p {
@@ -42,7 +42,7 @@
   h2 {
     text-align: left;
     margin-bottom: 1em;
-    font-family: var(--font-family-title-section);
+    font-weight: 800;
   }
 }
 
@@ -50,7 +50,7 @@
   margin-bottom: 2em;
 
   h2 {
-    font-family: var(--font-family-title-section);
+    font-weight: 800;
     text-align: left;
     color: var(--color-main-title);
     margin-bottom: 1em;

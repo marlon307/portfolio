@@ -113,6 +113,12 @@ const Aboute = function Aboute() {
           <h2>Experiências</h2>
           <div className={ style.esxp }>
             <Exp
+              year={ 2022 }
+              office="Dev. Web Full-Stack"
+              institution="Coinsure"
+              info="01/2022 - 09/2022 • Trabalhando na implementação e manutenção de CMS, RH e aplicação para cotar seguros, que irá conectar o usuário final direto com a seguradora. Utilizando as seguintes ferramentas React.Js, Styled-components, Node.js e MySql para desenvolver essas aplicações."
+            />
+            <Exp
               year={ 2021 }
               office="Dev. Web Full-Stack"
               institution="Trybe"

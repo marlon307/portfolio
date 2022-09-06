@@ -14,7 +14,7 @@ const Project = function Project() {
       </div>
       <div className={ style.mural }>
         <Card
-          link="https://github.com/marlon307/project-respponse"
+          link="https://project-respponse-marlon307.vercel.app/"
           url={ pitcRespponse }
           number="1"
           name="Respponse"

@@ -89,6 +89,7 @@
 }
 
 .placeholder {
+  pointer-events: none;
   position: absolute;
   left: 0.8em;
   transition: transform 0.2s ease-in-out;

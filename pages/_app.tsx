@@ -1,8 +1,9 @@
 import React from 'react';
-import '../styles/globals.css';
+import '../styles/globals.scss';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import Header from '../components/Header';
+import { Modal } from '../components/Modal';
 
 const MyApp = function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,6 +27,7 @@ const MyApp = function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Component { ...pageProps } />
+      <Modal />
     </>
   );
 };

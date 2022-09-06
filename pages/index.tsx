@@ -6,7 +6,6 @@ import Carousel from '../components/Carousel/Carousel';
 import Apresentation from '../components/Apresentation/Apresentation';
 import Aboute from '../components/Aboute/Aboute';
 import Project from '../components/PProject/Project';
-import { Modal } from '../components/Modal';
 
 const Home: NextPage = function Home() {
   const [pagestate, setPagestate] = useState(100);
@@ -20,7 +19,6 @@ const Home: NextPage = function Home() {
           <Project />
         </Carousel>
       </main>
-      <Modal />
       <footer className={ style.footer }>
         <nav>
           <ul>

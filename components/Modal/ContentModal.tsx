@@ -1,47 +1,43 @@
 import React, { useEffect, useRef } from 'react';
-import ReactDOM from 'react-dom';
-import useOutSideClick from '../../Hooks/useOutSideClick';
+import { createPortal } from 'react-dom';
+import useOutsideClick from '../../Hooks/useOutSideClick';
 import style from './style.module.scss';
 
-type ContentModalProps = {
-  children: React.ReactNode
-  active: boolean;
-  functionTogle: Function;
-}
+type PModal = {
+  children: any,
+  isOpen: boolean;
+  openModal: Function;
+};
 
-const ContentModal = function ContentModal({ children, active, functionTogle }: ContentModalProps) {
-  if (typeof window === 'undefined') return null;
+function ContentModal({ children, isOpen, openModal }: PModal) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const getModal = children && isOpen && document.getElementById('modal');
 
-  const getModal = document.getElementById('modal')!;
-  const modalRef = useRef(null);
-
-  useOutSideClick(modalRef, () => {
-    if (active) functionTogle(false);
-  });
+  useOutsideClick(modalRef, () => isOpen && openModal(false));
 
   useEffect(() => {
-    if (active) {
+    if (isOpen) {
       getModal.classList.add(style.active);
-    } else {
-      getModal.classList.remove(style.active);
+      document.body.classList.add('hidden');
     }
-  }, [active, getModal.classList]);
 
-  return (
-    getModal
-      ? ReactDOM.createPortal(
-        active && (
-          <div
-            className={ style.content }
-            ref={ modalRef }
-          >
-            { children }
-          </div>
-        ),
-        getModal,
-      )
-      : null
+    return () => {
+      if (children && isOpen) {
+        getModal.classList.remove(style.active);
+        document.body.removeAttribute('class');
+      }
+    };
+  }, [children, getModal.classList, isOpen]);
+
+  return children && isOpen && createPortal(
+    <div
+      ref={ modalRef }
+      className={ style.content_modal }
+    >
+      { children }
+    </div>,
+    getModal,
   );
-};
+}
 
 export default ContentModal;

@@ -3,14 +3,11 @@ import cx from 'classnames';
 import style from './style.module.scss';
 import { ContentModal } from '../Modal';
 import Contact from '../Contact';
-import useOutSideClick from '../../Hooks/useOutSideClick';
 
 const Header = function Header() {
   const [menuStatus, setMenuStatus] = useState(false);
-  const [modaStatus, setModalStatus] = useState(false);
+  const [modalContact, setModalcontact] = useState(false);
   const ref = useRef(null);
-
-  useOutSideClick(ref, () => setMenuStatus(false));
 
   function handleClickMenu(event: { preventDefault: () => void; }) {
     event.preventDefault();
@@ -19,7 +16,7 @@ const Header = function Header() {
 
   function openModal(event: { preventDefault: () => void; }) {
     event.preventDefault();
-    setModalStatus(true);
+    setModalcontact(true);
   }
 
   return (
@@ -83,7 +80,10 @@ const Header = function Header() {
           </div>
         </div>
       </nav>
-      <ContentModal active={ modaStatus } functionTogle={ setModalStatus }>
+      <ContentModal
+        isOpen={ modalContact }
+        openModal={ setModalcontact }
+      >
         <Contact />
       </ContentModal>
     </header>

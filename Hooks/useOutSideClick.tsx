@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
 
-function useOutSideClick(ref: any, callback: Function) {
+const useOutsideClick = (ref: any, callback: Function) => {
   useEffect(() => {
-    function handleClick({ target }: any) {
-      if (ref.current && !ref.current.contains(target)) {
-        callback();
+    const handleClick = (event: { target: any; }) => {
+      const contentModal = ref.current?.contains(event.target);
+
+      if (ref.current && !contentModal) {
+        callback(false);
       }
-    }
-    document.addEventListener('click', handleClick);
+    };
+    document.addEventListener('mousedown', handleClick);
 
     return () => {
-      document.removeEventListener('click', handleClick);
+      document.removeEventListener('mousedown', handleClick);
     };
   }, [callback, ref]);
-}
+};
 
-export default useOutSideClick;
+export default useOutsideClick;

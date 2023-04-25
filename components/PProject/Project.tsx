@@ -19,7 +19,7 @@ const Project = function Project() {
           url={ pitcAppAgenda }
           number="1"
           name="App agenda"
-          desc="Agenda eficiente em que gera honorários com base no tempo de serviço."
+          desc="Agenda eficiente em que gera horários com base no tempo de serviço."
         />
         <Card
           link="https://project-respponse-marlon307.vercel.app/"

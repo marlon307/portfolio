@@ -15,20 +15,20 @@ const Card = function Card({
 }: CardProps) {
   return (
     <a href={ link } target="_blank" rel="noopener noreferrer" className={ style.cardproject }>
-      <div>
+      <div className={ style.desc }>
         <p>{ desc }</p>
-        <span>{ name }</span>
-        <h2>{ number }</h2>
+        <dl className={ style.info }>
+          <dt>{ name }</dt>
+          <dl>{ number }</dl>
+        </dl>
       </div>
       <div>
-        <picture>
+        <picture className={ style.picture }>
           <Image
             quality={ 100 }
             src={ url }
             width={ 300 }
             height={ 240 }
-            layout="responsive"
-            objectFit="cover"
             alt={ name }
           />
         </picture>

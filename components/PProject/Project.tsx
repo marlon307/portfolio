@@ -38,7 +38,7 @@ const Project = function Project() {
           acessórios."
         />
         <Card
-          link="https://coinsure.com.br/"
+          link="https://www.linkedin.com/company/coinsure/about/"
           url={ pitcCoinsure }
           number="4"
           name="Coinsure"

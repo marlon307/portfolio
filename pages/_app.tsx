@@ -12,10 +12,12 @@ const MyApp = function MyApp({ Component, pageProps }: AppProps) {
         <title>marlon307</title>
         <meta name="description" content="Sou um desenvolvedor full stack e aqui apresento minha carreira e projetos." />
         <meta property="og:title" content="marlon307" />
-        <meta property="og:description" content="Portfólio Marlon307" />
-        <meta property="og:url" content="https://marlon307.dev/" />
+        <meta property="og:description" content="Sou um desenvolvedor full stack e aqui apresento minha carreira e projetos." />
+        <meta property="og:url" content="https://portfolio-marlon307.vercel.app/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/image.png" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="index, follow" />
         <meta property="og:description" content="Sou um desenvolvedor full stack e aqui apresento minha carreira e projetos." />
         <meta name="twitter:url" content="https://twitter.com/_marlon307" />
         <meta name="linkedin:url" content="https://www.linkedin.com/in/marlon307/" />

@@ -7,7 +7,6 @@ type TCarouselProps = {
 }
 
 const Carousel = function Carousel({ position, children }: TCarouselProps) {
-  // const [position, setPosition] = useState();
   return (
     <div className={ style.carousel }>
       <div className={ style.controller } style={ { transform: `translateX(${position}vw)` } }>

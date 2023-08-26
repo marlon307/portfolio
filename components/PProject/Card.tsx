@@ -19,7 +19,7 @@ const Card = function Card({
         <p>{ desc }</p>
         <dl className={ style.info }>
           <dt>{ name }</dt>
-          <dl>{ number }</dl>
+          <dd>{ number }</dd>
         </dl>
       </div>
       <div>

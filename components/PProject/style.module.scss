@@ -83,6 +83,12 @@
     color: var(--color-text);
   }
 
+  dd {
+    font-weight: 500;
+    font-size: 1.7em;
+    color: var(--color-text);
+  }
+
   div:first-child {
     padding: 0.6em;
     order: 1;

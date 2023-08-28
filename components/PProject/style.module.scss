@@ -61,6 +61,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 0.2s linear;
+    overflow: auto;
   }
 
   &:hover {

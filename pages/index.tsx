@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { NextPage } from 'next';
+import { type NextPage } from 'next';
 import cx from 'classnames';
 import style from '../styles/global.module.scss';
 import Carousel from '../components/Carousel/Carousel';

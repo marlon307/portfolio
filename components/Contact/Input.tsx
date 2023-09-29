@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import style from './style.module.scss';
 
 export type TInputProps = {
@@ -6,12 +6,10 @@ export type TInputProps = {
   type: string;
   required?: boolean;
   name: string;
-  eventchange: Function;
-  value: string;
 }
 
 const Input = function Input({
-  id, type, name, required, eventchange, value,
+  id, type, name, required = false,
 }: TInputProps) {
   function isRquired() {
     if (required) {
@@ -35,17 +33,11 @@ const Input = function Input({
           placeholder={ id }
           name={ name }
           required={ required }
-          onChange={ (event: ChangeEvent<HTMLInputElement>) => eventchange(event) }
-          value={ value }
         />
         { isRquired() }
       </label>
     </div>
   );
-};
-
-Input.defaultProps = {
-  required: false,
 };
 
 export default Input;

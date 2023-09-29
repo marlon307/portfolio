@@ -3,8 +3,7 @@
   width: 100%;
   position: sticky;
   top: 0;
-  backdrop-filter: blur(5px);
-  background: #171717f2;
+  background: var(--color-background);
   padding: 1em;
 
   nav {

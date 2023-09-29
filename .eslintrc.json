@@ -24,14 +24,31 @@
   "rules": {
     "jsx-a11y/anchor-is-valid": 0,
     "no-use-before-define": "off",
+    "react/require-default-props": "off",
     // "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     // "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "@typescript-eslint/no-use-before-define": [
+      "error"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
     "react/jsx-props-no-spreading": "off",
-    "react/jsx-curly-spacing": [2, {"when": "always", "spacing": {
-      "objectLiterals": "always"
-    }}],
+    "react/jsx-curly-spacing": [
+      2,
+      {
+        "when": "always",
+        "spacing": {
+          "objectLiterals": "always"
+        }
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -41,12 +58,17 @@
         "ts": "never",
         "tsx": "never"
       }
-   ]
+    ]
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   }

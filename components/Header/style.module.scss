@@ -1,24 +1,23 @@
 .header {
   z-index: 9998;
   width: 100%;
-  max-width: 1450px;
-  margin: 0 auto;
-  position: fixed;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(5px);
+  background: #171717f2;
   padding: 1em;
-  left: 50%;
-  transform: translate3d(-50%, 0, 10px);
 
   nav {
+    max-width: 1450px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  li {
-    float: left;
-    margin: 0 18px;
-    font-size: 0.84em;
-    font-weight: 400;
+  ul {
+    display: flex;
+    gap: 1em;
   }
 
   svg {
@@ -50,109 +49,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 1.4em;
 
   svg {
     width: 22px;
   }
 
-  a {
-    z-index: 44;
-    cursor: pointer;
-  }
-
-  a:first-child {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.2em;
-    height: 1.2em;
-  }
-}
-
-.icomn {
-  position: absolute;
-  display: block;
-  width: 24px;
-  height: 3px;
-  border-radius: 12px;
-  background: var(--color-main-title);
-  margin-bottom: 0.46em;
-  transition: all 0.2s linear;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 3px;
-    top: 8px;
-    right: 0;
-    background: var(--color-main-title);
-    border-radius: 12px;
-    transition: all 0.2s linear;
-  }
-}
-
-.icomn.active {
-  transform: rotateZ(45deg);
-  margin-bottom: 0;
-
-  &::before {
-    content: '';
-    top: 0;
-    width: 24px;
-    transform: rotateZ(-90deg);
-  }
-}
-
-.dropmn {
-  position: absolute;
-  width: 22em;
-  height: 22em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 50%;
-  clip-path: circle(0);
-  background: var(--color-background2);
-  visibility: hidden;
-  pointer-events: none;
-  overflow: hidden;
-  will-change: auto;
-  transition: all 0.2s linear;
-  z-index: -5;
-
-  ul {
-    margin-top: 8em;
-    margin-left: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
   li {
+    cursor: pointer;
     color: var(--color-main-title);
     font-size: 1em;
-    padding: 0.4em;
-    margin: 0.4em;
+    font-weight: 500;
+  }
+
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8em;
-    font-weight: 500;
-  }
-}
-
-.dropmn.active {
-  visibility: visible;
-  pointer-events: all;
-  clip-path: circle(50%);
-}
-
-@media (max-width: 725px) {
-  .header {
-    padding: 1em 0;
+    gap: 6px;
   }
 }

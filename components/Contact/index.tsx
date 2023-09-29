@@ -1,53 +1,21 @@
-import React, { useRef, useCallback, useState } from 'react';
+import React, { type FormEvent, useState } from 'react';
 import emailjs from 'emailjs-com';
 import Input from './Input';
 import style from './style.module.scss';
 
-type RefProps = {
-  current: any
-}
-
-type TChangeInp = {
-  target: {
-    name: string;
-    value: string;
-  }
-}
-
 const Index = function Index() {
   const [sucess, setSucess] = useState(0);
-  const [forminfo, setFormInfo] = useState({
-    user_name: '',
-    user_email: '',
-    message: '',
-  });
 
-  const onChangeInputs = useCallback(({ target }: TChangeInp): void => {
-    const { name, value } = target;
-
-    setFormInfo({
-      ...forminfo,
-      [name]: value,
-    });
-  }, [forminfo]);
-
-  const form: RefProps = useRef<HTMLFormElement>(null);
-
-  const sendEmail = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
+  const sendEmail = (event: FormEvent) => {
+    event.preventDefault();
 
     const service = process.env.SERVICE_ID!;
     const template = process.env.TEMPLATE_ID!;
     const integration = process.env.USER_ID!;
 
     try {
-      emailjs.sendForm(service, template, form.current, integration)
+      emailjs.sendForm(service, template, event.target as HTMLFormElement, integration)
         .then(() => {
-          setFormInfo({
-            user_name: '',
-            user_email: '',
-            message: '',
-          });
           setSucess(1);
         }, () => {
           setSucess(2);
@@ -60,19 +28,15 @@ const Index = function Index() {
   return (
     <section id="contact" className={ style.contact } onSubmit={ sendEmail }>
       <h1>Contato</h1>
-      <form ref={ form } className={ style.mailmessage }>
+      <form className={ style.mailmessage }>
         <div className={ style.primaryline }>
           <Input
-            eventchange={ onChangeInputs }
-            value={ forminfo.user_name }
             id="Nome"
             name="user_name"
             type="text"
             required
           />
           <Input
-            eventchange={ onChangeInputs }
-            value={ forminfo.user_email }
             id="Email"
             name="user_email"
             type="email"
@@ -87,8 +51,6 @@ const Index = function Index() {
           cols={ 30 }
           rows={ 7 }
           maxLength={ 500 }
-          value={ forminfo.message }
-          onChange={ onChangeInputs }
           required
         />
         <div className={ style.button }>

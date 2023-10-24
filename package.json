@@ -10,20 +10,20 @@
   "dependencies": {
     "classnames": "^2.3.2",
     "emailjs-com": "^3.2.0",
-    "next": "13.5.3",
+    "next": "13.5.6",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0"
+    "sass": "^1.69.4"
   },
   "devDependencies": {
-    "@types/node": "20.7.1",
-    "@types/react": "18.2.23",
-    "@types/react-dom": "^18.2.8",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
-    "eslint": "^8.50.0",
+    "@types/node": "20.8.8",
+    "@types/react": "18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "13.5.3",
+    "eslint-config-next": "13.5.6",
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "^5.2.2"
   }

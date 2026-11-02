@@ -1,9 +1,9 @@
 <script lang="ts">
   import Section from '#lib/components/Section.svelte';
-  import Timeline from '#lib/components/Timeline.svelte';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
+  import FeaturedProject from '#lib/components/FeaturedProject.svelte';
   import Expandable from '#lib/components/Expandable.svelte';
-  import { site, profile, links, experience, education, projects, stack, services } from '#lib/data.ts';
+  import { site, profile, links, schools, projects, stack, services } from '#lib/data.ts';
 
   const year = new Date().getFullYear();
   const title = `${profile.name} — ${profile.role} | ${profile.handle}`;
@@ -11,6 +11,9 @@
     'Portfólio de Marlon Ramos (marlon307), desenvolvedor full-stack especializado em TypeScript, React, Next.js, Svelte e Node.js. Veja projetos, experiência e serviços.';
   const canonical = `${site.url}/`;
   const ogImage = `${site.url}/og.png`;
+  const featured = projects.filter((p) => p.featured);
+  const others = projects.filter((p) => !p.featured);
+  const linkedin = links.find((l) => l.label === 'linkedin')!.href;
   const sameAs = links.filter((l) => !l.download).map((l) => l.href);
 
   const jsonLd = {
@@ -28,7 +31,7 @@
         sameAs,
         address: { '@type': 'PostalAddress', addressCountry: 'BR' },
         knowsAbout: stack.flatMap((row) => row.items.split(', ')),
-        alumniOf: education.map((e) => ({ '@type': 'EducationalOrganization', name: e.place })),
+        alumniOf: schools.map((name) => ({ '@type': 'EducationalOrganization', name })),
       },
       {
         '@type': 'WebSite',
@@ -121,10 +124,25 @@
           <p>{paragraph}</p>
         {/each}
       </div>
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-block font-mono text-sm text-muted transition hover:text-accent"
+      >
+        → experiência e formação completas no linkedin
+      </a>
     </Section>
 
     <Section index="02" title="projetos" id="projetos">
-      <Expandable items={projects} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
+      <div class="space-y-4">
+        {#each featured as project (project.slug)}
+          <FeaturedProject {project} />
+        {/each}
+      </div>
+
+      <h3 class="mt-10 mb-4 font-mono text-xs text-muted">// outros projetos</h3>
+      <Expandable items={others} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
         {#snippet list(items)}
           <div class="grid gap-4 sm:grid-cols-2">
             {#each items as project (project.slug)}
@@ -143,23 +161,7 @@
       </a>
     </Section>
 
-    <Section index="03" title="experiência" id="experiencia">
-      <Expandable items={experience} noun={['experiência', 'experiências']}>
-        {#snippet list(items, offset, isFinal)}
-          <Timeline {items} {offset} {isFinal} highlightFirst />
-        {/snippet}
-      </Expandable>
-    </Section>
-
-    <Section index="04" title="formação" id="formacao">
-      <Expandable items={education} noun={['formação', 'formações']}>
-        {#snippet list(items, offset, isFinal)}
-          <Timeline {items} {offset} {isFinal} />
-        {/snippet}
-      </Expandable>
-    </Section>
-
-    <Section index="05" title="stack" id="stack">
+    <Section index="03" title="stack" id="stack">
       <dl class="grid grid-cols-[110px_1fr] gap-y-3 font-mono text-sm sm:grid-cols-[140px_1fr]">
         {#each stack as row (row.group)}
           <dt class="text-muted">{row.group}</dt>
@@ -168,7 +170,7 @@
       </dl>
     </Section>
 
-    <Section index="06" title="serviços" id="servicos">
+    <Section index="04" title="serviços" id="servicos">
       <ul class="divide-y divide-line border-y border-line">
         {#each services as service (service.name)}
           <li class="flex flex-col gap-1 py-4 sm:flex-row sm:justify-between">
@@ -179,7 +181,7 @@
       </ul>
     </Section>
 
-    <Section index="07" title="contato" id="contato">
+    <Section index="05" title="contato" id="contato">
       <p class="text-text/80">Tem um projeto em mente ou uma oportunidade? Vamos conversar.</p>
       <a
         href="https://www.linkedin.com/in/{profile.handle}/"

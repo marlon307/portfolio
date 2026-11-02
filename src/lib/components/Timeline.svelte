@@ -1,14 +1,19 @@
 <script lang="ts">
   import type { TimelineItem } from '#lib/data.ts';
 
-  let { items, highlightFirst = false }: { items: TimelineItem[]; highlightFirst?: boolean } = $props();
+  let {
+    items,
+    offset = 0,
+    isFinal = true,
+    highlightFirst = false,
+  }: { items: TimelineItem[]; offset?: number; isFinal?: boolean; highlightFirst?: boolean } = $props();
 </script>
 
-<ol class="border-l border-line">
+<ol class="border-l border-line" start={offset + 1}>
   {#each items as item, i (item.place + item.period)}
-    <li class="relative pl-6 {i < items.length - 1 ? 'pb-8' : ''}">
+    <li class="relative pl-6 {isFinal && i === items.length - 1 ? '' : 'pb-8'}">
       <span
-        class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full {highlightFirst && i === 0
+        class="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full {highlightFirst && offset + i === 0
           ? 'bg-accent'
           : 'border border-muted bg-line'}"
       ></span>

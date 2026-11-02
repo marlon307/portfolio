@@ -49,7 +49,7 @@
 
   {#if preview.length}
     <div
-      class="relative {gapClass} {expanded ? '' : 'overflow-hidden'}"
+      class="relative {gapClass} {expanded ? '' : 'overflow-y-clip'}"
       style:max-height={expanded ? null : peekHeight}
       inert={!expanded}
       aria-hidden={!expanded}

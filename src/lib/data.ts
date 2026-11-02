@@ -42,51 +42,9 @@ export const links = [
   { label: 'cv.pdf', href: 'https://github.com/marlon307/marlon307/raw/main/svg/Marlon.pdf', download: true },
 ];
 
-export type TimelineItem = {
-  period: string;
-  title: string;
-  place: string;
-  description: string;
-};
-
-export const experience: TimelineItem[] = [
-  {
-    period: '01/2022 — 09/2022',
-    title: 'Dev. Web Full-Stack',
-    place: 'Coinsure',
-    description:
-      'Implementação e manutenção de CMS, RH e de uma aplicação para cotar seguros, conectando o usuário final direto com a seguradora. React, Styled-components, Node.js e MySQL.',
-  },
-  {
-    period: '02/2019 — 02/2021',
-    title: 'Auxiliar de Logística',
-    place: 'SerraPark Log',
-    description: 'Organização e supervisão do estoque de mercadorias e monitoramento da entrada e saída de itens.',
-  },
-  {
-    period: '01/2015 — 10/2017',
-    title: 'Auxiliar Administrativo',
-    place: 'Polvilho & Trigo Souza Batista LTDA',
-    description:
-      'Organização de documentos, produção de planilhas e relatórios, atendimento ao cliente e gestão logística e de estoque.',
-  },
-];
-
-export const education: TimelineItem[] = [
-  {
-    period: '03/2021 — 03/2022',
-    title: 'Desenvolvimento Web Full-Stack',
-    place: 'Trybe',
-    description:
-      'Mais de 1500 horas de formação em front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.',
-  },
-  {
-    period: '01/2020 — 02/2021',
-    title: 'Web Design',
-    place: 'Origamid',
-    description: 'Cursos de Web Design, Tipografia, JavaScript, Sass, HTML5, CSS3, UX Design, UI Design e React.',
-  },
-];
+// Experiência e formação completas ficam no LinkedIn. As instituições abaixo
+// são usadas apenas nos dados estruturados (SEO).
+export const schools = ['Trybe', 'Origamid'];
 
 export type Project = {
   slug: string;
@@ -95,16 +53,20 @@ export type Project = {
   tags: string[];
   url: string;
   image: string;
+  /** Projetos em destaque aparecem maiores, no topo da seção */
+  featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    slug: 'loja-online',
-    name: 'Loja Online',
-    description: 'E-commerce integrado à API Storefront da Shopify.',
+    slug: 'commerce-drop',
+    name: 'Commerce Drop',
+    description:
+      'Loja virtual headless integrada à API Storefront da Shopify, com catálogo, carrinho e checkout rápidos e responsivos.',
     tags: ['svelte', 'typescript', 'tailwind', 'shopify'],
     url: 'https://commerce-drop.vercel.app/',
-    image: '/projects/loja-online.png',
+    image: '/projects/commerce-drop.png',
+    featured: true,
   },
   {
     slug: 'respponse',
@@ -117,9 +79,11 @@ export const projects: Project[] = [
   {
     slug: 'horanza',
     name: 'Horanza',
-    description: 'Plataforma de agendamento online que gera os horários disponíveis com base no tempo de cada serviço.',
+    description:
+      'Plataforma de agendamento online que gera automaticamente os horários disponíveis com base na duração de cada serviço.',
     tags: [],
-    url: 'https://www.app-agenda.com/',
+    featured: true,
+    url: 'https://horanza.com/',
     image: '/projects/horanza.png',
   },
   {

@@ -1,7 +1,6 @@
 <script lang="ts">
   import Section from '#lib/components/Section.svelte';
-  import ProjectCard from '#lib/components/ProjectCard.svelte';
-  import Expandable from '#lib/components/Expandable.svelte';
+  import ProjectGrid from '#lib/components/ProjectGrid.svelte';
   import { site, profile, links, schools, projects, stack, services } from '#lib/data.ts';
 
   const year = new Date().getFullYear();
@@ -132,15 +131,7 @@
     </Section>
 
     <Section index="02" title="projetos" id="projetos">
-      <Expandable items={projects} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
-        {#snippet list(items)}
-          <div class="grid gap-4 sm:grid-cols-2">
-            {#each items as project (project.slug)}
-              <ProjectCard {project} />
-            {/each}
-          </div>
-        {/snippet}
-      </Expandable>
+      <ProjectGrid {projects} />
       <a
         href="https://github.com/{profile.handle}"
         target="_blank"

@@ -15,9 +15,8 @@ export const profile = {
   summary:
     'Desenvolvo aplicações web rápidas, acessíveis e escaláveis — de lojas virtuais a plataformas de agendamento — do front-end ao back-end.',
   about: [
-    'Sou Marlon Ramos (marlon307), desenvolvedor full-stack com formação de mais de 1.500 horas pela Trybe. Trabalho com TypeScript, React, Next.js, Svelte e Node.js para criar produtos web com foco em performance, acessibilidade e boa experiência de uso.',
-    'Já atuei no desenvolvimento de CMS, sistemas de RH e de uma plataforma de cotação de seguros na Coinsure, criei lojas virtuais integradas à Shopify, plugins e temas WordPress e o Horanza, uma plataforma de agendamento online.',
-    'Acredito que qualquer ideia pode virar realidade com foco e boa engenharia — e meu objetivo é ajudar pessoas e empresas a transformar essas ideias em produtos digitais simples, confiáveis e humanos.',
+    'Sou Marlon Ramos, desenvolvedor full-stack. Crio aplicações web rápidas e escaláveis com TypeScript, React, Next.js, Svelte e Node.js — de lojas virtuais integradas à Shopify a plataformas de agendamento como o Horanza.',
+    'Foco em performance, acessibilidade e código limpo para transformar ideias em produtos simples e confiáveis.',
   ],
   status: 'aberto a novas oportunidades',
   keywords: [
@@ -73,14 +72,6 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://horanza.com/',
     image: '/projects/horanza.webp',
-  },
-  {
-    slug: 'respponse',
-    name: 'Respponse',
-    description: 'E-commerce com foco em venda de roupas e acessórios.',
-    tags: ['next.js', 'typescript'],
-    url: 'https://project-respponse-marlon307.vercel.app/',
-    image: '/projects/respponse.png',
   },
   {
     slug: 'mundo-do-poliglota',

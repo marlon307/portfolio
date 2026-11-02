@@ -102,7 +102,7 @@ export const projects: Project[] = [
 export const stack = [
   { group: 'front-end', items: 'HTML, CSS, Sass, JavaScript, TypeScript, React, Redux, Next.js, Svelte, Tailwind' },
   { group: 'back-end', items: 'Node.js, Python, Flask, C#' },
-  { group: 'banco de dados', items: 'MySQL, MongoDB' },
+  { group: 'banco de dados', items: 'PostgreSQL, MySQL' },
   { group: 'cloud', items: 'Cloudflare, Vercel' },
   { group: 'ferramentas', items: 'Git, GitHub, VS Code, WordPress, Shopify' },
 ];

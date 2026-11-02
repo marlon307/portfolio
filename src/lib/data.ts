@@ -1,17 +1,38 @@
 // Todo o conteúdo do portfólio fica aqui. Edite este arquivo para atualizar o site.
 
+export const site = {
+  url: 'https://marlon307.vercel.app',
+  locale: 'pt_BR',
+  twitter: '@_marlon307',
+};
+
 export const profile = {
   name: 'Marlon Ramos',
   handle: 'marlon307',
   role: 'Desenvolvedor Full-Stack',
+  headline: 'Desenvolvedor Full-Stack · TypeScript, React, Next.js, Svelte e Node.js',
   location: 'Brasil',
   summary:
-    'Construo sites e aplicações web simples, rápidos e fáceis de usar — do front-end ao back-end.',
+    'Desenvolvo aplicações web rápidas, acessíveis e escaláveis — de lojas virtuais a plataformas de agendamento — do front-end ao back-end.',
   about: [
-    'Gosto da tecnologia porque qualquer ideia pode virar realidade: basta acreditar e ter foco.',
-    'Meu objetivo como desenvolvedor é participar desses momentos e tornar o futuro um lugar mais humanizado.',
+    'Sou Marlon Ramos (marlon307), desenvolvedor full-stack com formação de mais de 1.500 horas pela Trybe. Trabalho com TypeScript, React, Next.js, Svelte e Node.js para criar produtos web com foco em performance, acessibilidade e boa experiência de uso.',
+    'Já atuei no desenvolvimento de CMS, sistemas de RH e de uma plataforma de cotação de seguros na Coinsure, criei lojas virtuais integradas à Shopify, plugins e temas WordPress e o Horanza, uma plataforma de agendamento online.',
+    'Acredito que qualquer ideia pode virar realidade com foco e boa engenharia — e meu objetivo é ajudar pessoas e empresas a transformar essas ideias em produtos digitais simples, confiáveis e humanos.',
   ],
   status: 'aberto a novas oportunidades',
+  keywords: [
+    'Marlon Ramos',
+    'marlon307',
+    'desenvolvedor full-stack',
+    'desenvolvedor web',
+    'desenvolvedor front-end',
+    'React',
+    'Next.js',
+    'Svelte',
+    'TypeScript',
+    'Node.js',
+    'portfólio',
+  ],
 };
 
 export const links = [
@@ -94,12 +115,12 @@ export const projects: Project[] = [
     image: '/projects/respponse.png',
   },
   {
-    slug: 'app-agenda',
-    name: 'App Agenda',
-    description: 'Agenda eficiente que gera horários com base no tempo de cada serviço.',
+    slug: 'horanza',
+    name: 'Horanza',
+    description: 'Plataforma de agendamento online que gera os horários disponíveis com base no tempo de cada serviço.',
     tags: [],
     url: 'https://www.app-agenda.com/',
-    image: '/projects/app-agenda.png',
+    image: '/projects/horanza.png',
   },
   {
     slug: 'mundo-do-poliglota',

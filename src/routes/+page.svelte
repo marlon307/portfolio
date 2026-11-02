@@ -2,21 +2,83 @@
   import Section from '#lib/components/Section.svelte';
   import Timeline from '#lib/components/Timeline.svelte';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
-  import { profile, links, experience, education, projects, stack, services } from '#lib/data.ts';
+  import { site, profile, links, experience, education, projects, stack, services } from '#lib/data.ts';
 
   const year = new Date().getFullYear();
-  const description = `${profile.name} — ${profile.role}. Experiência, projetos e serviços.`;
+  const title = `${profile.name} — ${profile.role} | ${profile.handle}`;
+  const description =
+    'Portfólio de Marlon Ramos (marlon307), desenvolvedor full-stack especializado em TypeScript, React, Next.js, Svelte e Node.js. Veja projetos, experiência e serviços.';
+  const canonical = `${site.url}/`;
+  const ogImage = `${site.url}/og.png`;
+  const sameAs = links.filter((l) => !l.download).map((l) => l.href);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': `${canonical}#person`,
+        name: profile.name,
+        alternateName: profile.handle,
+        jobTitle: profile.role,
+        description: profile.summary,
+        url: canonical,
+        image: `${site.url}/image.png`,
+        sameAs,
+        address: { '@type': 'PostalAddress', addressCountry: 'BR' },
+        knowsAbout: stack.flatMap((row) => row.items.split(', ')),
+        alumniOf: education.map((e) => ({ '@type': 'EducationalOrganization', name: e.place })),
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${canonical}#website`,
+        url: canonical,
+        name: `${profile.name} — Portfólio`,
+        inLanguage: 'pt-BR',
+        author: { '@id': `${canonical}#person` },
+      },
+      {
+        '@type': 'ProfilePage',
+        url: canonical,
+        name: title,
+        inLanguage: 'pt-BR',
+        mainEntity: { '@id': `${canonical}#person` },
+      },
+    ],
+  };
+  const jsonLdTag = `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</` + 'script>';
 </script>
 
 <svelte:head>
-  <title>{profile.name} — {profile.role}</title>
+  <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="author" content={profile.name} />
-  <meta property="og:title" content={profile.name} />
+  <meta name="keywords" content={profile.keywords.join(', ')} />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href={canonical} />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="{profile.name} — Portfólio" />
+  <meta property="og:locale" content={site.locale} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content="https://marlon307.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/image.png" />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="{profile.name} — {profile.headline}" />
+  <meta property="profile:first_name" content="Marlon" />
+  <meta property="profile:last_name" content="Ramos" />
+  <meta property="profile:username" content={profile.handle} />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content={site.twitter} />
+  <meta name="twitter:creator" content={site.twitter} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  {@html jsonLdTag}
 </svelte:head>
 
 <main class="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-24">
@@ -28,11 +90,8 @@
       {profile.name}<span class="cursor text-accent">_</span>
     </h1>
 
-    <p class="mt-4 text-base text-muted sm:text-lg">
-      {profile.role}
-      <span class="mx-2 text-line">|</span>
-      {profile.location}
-    </p>
+    <p class="mt-4 text-base text-muted sm:text-lg">{profile.headline}</p>
+    <p class="mt-1 text-sm text-muted/70">{profile.location}</p>
 
     <p class="mt-8 max-w-xl font-sans text-base leading-relaxed text-text/80">{profile.summary}</p>
 

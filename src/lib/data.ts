@@ -38,7 +38,6 @@ export const links = [
   { label: 'linkedin', href: 'https://www.linkedin.com/in/marlon307/' },
   { label: 'github', href: 'https://github.com/marlon307' },
   { label: 'twitter', href: 'https://twitter.com/_marlon307' },
-  { label: 'cv.pdf', href: 'https://github.com/marlon307/marlon307/raw/main/svg/Marlon.pdf', download: true },
 ];
 
 // Experiência e formação completas ficam no LinkedIn. As instituições abaixo

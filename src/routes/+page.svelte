@@ -10,7 +10,7 @@
   const canonical = `${site.url}/`;
   const ogImage = `${site.url}/og.png`;
   const linkedin = links.find((l) => l.label === 'linkedin')!.href;
-  const sameAs = links.filter((l) => !l.download).map((l) => l.href);
+  const sameAs = links.map((l) => l.href);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -104,9 +104,8 @@
       {#each links as link (link.href)}
         <a
           href={link.href}
-          target={link.download ? undefined : '_blank'}
+          target="_blank"
           rel="noopener noreferrer"
-          download={link.download || undefined}
           class="text-muted transition hover:text-accent">[{link.label}]</a
         >
       {/each}

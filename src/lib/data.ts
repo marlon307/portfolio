@@ -83,7 +83,7 @@ export const projects: Project[] = [
       'Plataforma de agendamento online que gera automaticamente os horários disponíveis com base na duração de cada serviço.',
     tags: [],
     featured: true,
-    url: 'https://www.app-agenda.com/',
+    url: 'https://horanza.com/',
     image: '/projects/horanza.png',
   },
   {

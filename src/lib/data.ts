@@ -10,7 +10,6 @@ export const profile = {
   name: 'Marlon Ramos',
   handle: 'marlon307',
   role: 'Desenvolvedor Full-Stack',
-  headline: 'Desenvolvedor Full-Stack · TypeScript, React, Next.js, Svelte e Node.js',
   location: 'Brasil',
   summary:
     'Desenvolvo aplicações web rápidas, acessíveis e escaláveis — de lojas virtuais a plataformas de agendamento — do front-end ao back-end.',

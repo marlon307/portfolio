@@ -66,7 +66,7 @@
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="{profile.name} — {profile.headline}" />
+  <meta property="og:image:alt" content="{profile.name} — {profile.role}" />
   <meta property="profile:first_name" content="Marlon" />
   <meta property="profile:last_name" content="Ramos" />
   <meta property="profile:username" content={profile.handle} />
@@ -90,7 +90,7 @@
       {profile.name}<span class="cursor text-accent">_</span>
     </h1>
 
-    <p class="mt-4 text-base text-muted sm:text-lg">{profile.headline}</p>
+    <p class="mt-4 text-base text-muted sm:text-lg">{profile.role}</p>
     <p class="mt-1 text-sm text-muted/70">{profile.location}</p>
 
     <p class="mt-8 max-w-xl font-sans text-base leading-relaxed text-text/80">{profile.summary}</p>

@@ -2,6 +2,7 @@
   import Section from '#lib/components/Section.svelte';
   import Timeline from '#lib/components/Timeline.svelte';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
+  import Expandable from '#lib/components/Expandable.svelte';
   import { site, profile, links, experience, education, projects, stack, services } from '#lib/data.ts';
 
   const year = new Date().getFullYear();
@@ -123,11 +124,15 @@
     </Section>
 
     <Section index="02" title="projetos" id="projetos">
-      <div class="grid gap-4 sm:grid-cols-2">
-        {#each projects as project (project.slug)}
-          <ProjectCard {project} />
-        {/each}
-      </div>
+      <Expandable items={projects} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
+        {#snippet list(items)}
+          <div class="grid gap-4 sm:grid-cols-2">
+            {#each items as project (project.slug)}
+              <ProjectCard {project} />
+            {/each}
+          </div>
+        {/snippet}
+      </Expandable>
       <a
         href="https://github.com/{profile.handle}"
         target="_blank"
@@ -139,11 +144,19 @@
     </Section>
 
     <Section index="03" title="experiência" id="experiencia">
-      <Timeline items={experience} highlightFirst />
+      <Expandable items={experience} noun={['experiência', 'experiências']}>
+        {#snippet list(items, offset, isFinal)}
+          <Timeline {items} {offset} {isFinal} highlightFirst />
+        {/snippet}
+      </Expandable>
     </Section>
 
     <Section index="04" title="formação" id="formacao">
-      <Timeline items={education} />
+      <Expandable items={education} noun={['formação', 'formações']}>
+        {#snippet list(items, offset, isFinal)}
+          <Timeline {items} {offset} {isFinal} />
+        {/snippet}
+      </Expandable>
     </Section>
 
     <Section index="05" title="stack" id="stack">

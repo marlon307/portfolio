@@ -1,30 +1,26 @@
 {
   "name": "portfolio",
   "private": true,
+  "version": "2.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "classnames": "^2.5.1",
-    "emailjs-com": "^3.2.0",
-    "next": "14.2.13",
-    "react": "18.3.1",
-    "react-dom": "^18.2.0",
-    "sass": "^1.70.0"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@types/node": "22.7.4",
-    "@types/react": "18.3.10",
-    "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^8.7.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "eslint": "^9.11.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "14.2.13",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "typescript": "^5.3.3"
+    "@sveltejs/adapter-vercel": "^7.0.2",
+    "@sveltejs/kit": "^3.1.1",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.8",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.5"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
   }
 }

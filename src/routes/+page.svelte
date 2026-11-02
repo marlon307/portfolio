@@ -1,7 +1,6 @@
 <script lang="ts">
   import Section from '#lib/components/Section.svelte';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
-  import FeaturedProject from '#lib/components/FeaturedProject.svelte';
   import Expandable from '#lib/components/Expandable.svelte';
   import { site, profile, links, schools, projects, stack, services } from '#lib/data.ts';
 
@@ -11,8 +10,6 @@
     'Portfólio de Marlon Ramos (marlon307), desenvolvedor full-stack especializado em TypeScript, React, Next.js, Svelte e Node.js. Veja projetos, experiência e serviços.';
   const canonical = `${site.url}/`;
   const ogImage = `${site.url}/og.png`;
-  const featured = projects.filter((p) => p.featured);
-  const others = projects.filter((p) => !p.featured);
   const linkedin = links.find((l) => l.label === 'linkedin')!.href;
   const sameAs = links.filter((l) => !l.download).map((l) => l.href);
 
@@ -135,14 +132,7 @@
     </Section>
 
     <Section index="02" title="projetos" id="projetos">
-      <div class="space-y-4">
-        {#each featured as project (project.slug)}
-          <FeaturedProject {project} />
-        {/each}
-      </div>
-
-      <h3 class="mt-10 mb-4 font-mono text-xs text-muted">// outros projetos</h3>
-      <Expandable items={others} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
+      <Expandable items={projects} peek={2} peekHeight="9rem" gapClass="mt-4" noun={['projeto', 'projetos']}>
         {#snippet list(items)}
           <div class="grid gap-4 sm:grid-cols-2">
             {#each items as project (project.slug)}

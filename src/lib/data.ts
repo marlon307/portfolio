@@ -53,8 +53,6 @@ export type Project = {
   tags: string[];
   url: string;
   image: string;
-  /** Projetos em destaque aparecem maiores, no topo da seção */
-  featured?: boolean;
 };
 
 export const projects: Project[] = [
@@ -66,7 +64,15 @@ export const projects: Project[] = [
     tags: ['svelte', 'typescript', 'tailwind', 'shopify'],
     url: 'https://commerce-drop.vercel.app/',
     image: '/projects/commerce-drop.png',
-    featured: true,
+  },
+  {
+    slug: 'horanza',
+    name: 'Horanza',
+    description:
+      'Agendamentos inteligentes para profissionais e empresas: gera os horários disponíveis com base na duração de cada serviço.',
+    tags: [],
+    url: 'https://horanza.com/',
+    image: '/projects/horanza.webp',
   },
   {
     slug: 'respponse',
@@ -75,16 +81,6 @@ export const projects: Project[] = [
     tags: ['next.js', 'typescript'],
     url: 'https://project-respponse-marlon307.vercel.app/',
     image: '/projects/respponse.png',
-  },
-  {
-    slug: 'horanza',
-    name: 'Horanza',
-    description:
-      'Plataforma de agendamento online que gera automaticamente os horários disponíveis com base na duração de cada serviço.',
-    tags: [],
-    featured: true,
-    url: 'https://horanza.com/',
-    image: '/projects/horanza.png',
   },
   {
     slug: 'mundo-do-poliglota',

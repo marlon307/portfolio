@@ -6,7 +6,7 @@
   let {
     projects,
     visibleMobile = 2,
-    visibleDesktop = 4,
+    visibleDesktop = 2,
     peek = 112,
   }: {
     projects: Project[];
@@ -59,12 +59,13 @@
   }
 
   const collapsed = $derived(!expanded && overflowing);
+  const hidden = $derived(projects.length - visibleMobile);
 </script>
 
 <div bind:this={wrapper} class="scroll-mt-8">
   <div
     class="relative {collapsed ? 'overflow-y-clip' : ''} {collapsed && maxHeight === null
-      ? 'max-h-[56rem]'
+      ? 'max-h-[56rem] sm:max-h-[32rem]'
       : ''}"
     style:max-height={collapsed && maxHeight !== null ? `${maxHeight}px` : null}
   >
@@ -89,7 +90,7 @@
       class="group mt-3 flex w-full items-center gap-3 font-mono text-sm text-muted transition hover:text-accent"
     >
       <span class="h-px flex-1 bg-line transition group-hover:bg-accent/40"></span>
-      <span>{expanded ? '↑ mostrar menos' : `↓ ver todos os ${projects.length} projetos`}</span>
+      <span>{expanded ? '↑ mostrar menos' : `↓ mostrar mais ${hidden} ${hidden === 1 ? 'projeto' : 'projetos'}`}</span>
       <span class="h-px flex-1 bg-line transition group-hover:bg-accent/40"></span>
     </button>
   {/if}
